@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+  <tabs>
+    <Tab fx:id="hauptspeiseTab" text="Hauptspeise">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="startseite" layoutX="14.0" layoutY="294.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="264.0" text="Startseite" />
+                  <Separator layoutY="279.0" prefHeight="14.0" prefWidth="600.0" />
+                  <Button fx:id="hauptspeiseWeiter" layoutX="308.0" layoutY="294.0" mnemonicParsing="false" onAction="#hauptspeiseWeiterClicked" prefHeight="32.0" prefWidth="278.0" text="Weiter" />
+                  <RadioButton layoutX="52.0" layoutY="8.0" mnemonicParsing="false" text="Menü 1" />
+                  <RadioButton layoutX="248.0" layoutY="8.0" mnemonicParsing="false" text="Menü 2" />
+                  <RadioButton layoutX="455.0" layoutY="8.0" mnemonicParsing="false" text="Menü 3" />
+                  <Separator layoutX="201.0" layoutY="9.0" orientation="VERTICAL" prefHeight="270.0" prefWidth="0.0" />
+                  <Separator layoutX="402.0" layoutY="8.0" orientation="VERTICAL" prefHeight="272.0" prefWidth="6.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab fx:id="beilageTab" text="Beilage">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="beilageWeiter" layoutX="307.0" layoutY="294.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="278.0" text="Weiter" />
+                  <Button fx:id="beilageZurueck" layoutX="14.0" layoutY="294.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="264.0" text="Zurück" />
+                  <Separator layoutY="279.0" prefHeight="14.0" prefWidth="600.0" />
+                  <CheckBox layoutX="39.0" layoutY="33.0" mnemonicParsing="false" text="Pommes" />
+                  <CheckBox layoutX="39.0" layoutY="75.0" mnemonicParsing="false" text="Nudeln" />
+                  <CheckBox layoutX="39.0" layoutY="115.0" mnemonicParsing="false" text="Spätzle" />
+                  <CheckBox layoutX="39.0" layoutY="157.0" mnemonicParsing="false" text="Kroketten" />
+                  <CheckBox layoutX="238.0" layoutY="33.0" mnemonicParsing="false" text="Reis" />
+                  <CheckBox layoutX="238.0" layoutY="75.0" mnemonicParsing="false" text="Gemüse" />
+                  <CheckBox layoutX="238.0" layoutY="115.0" mnemonicParsing="false" text="Salat" />
+                  <CheckBox layoutX="39.0" layoutY="197.0" mnemonicParsing="false" text="Kartoffelbrei" />
+                  <CheckBox layoutX="238.0" layoutY="197.0" mnemonicParsing="false" text="Popcorn" />
+                  <CheckBox layoutX="238.0" layoutY="157.0" mnemonicParsing="false" text="Suppe" />
+                  <CheckBox layoutX="425.0" layoutY="108.0" mnemonicParsing="false" text="Rahmsoße" />
+                  <CheckBox layoutX="425.0" layoutY="141.0" mnemonicParsing="false" text="Jägersoße" />
+                  <CheckBox layoutX="425.0" layoutY="177.0" mnemonicParsing="false" text="Bratensoße" />
+                  <Separator layoutX="374.0" layoutY="85.0" prefWidth="200.0" />
+                  <Label layoutX="435.0" layoutY="40.0" prefHeight="35.0" prefWidth="78.0" text="Soßen" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab fx:id="getraenkeTab" text="Getränke">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="getraenkeWeiter" layoutX="307.0" layoutY="294.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="278.0" text="Weiter" />
+                  <Button fx:id="getraenkeZurueck" layoutX="14.0" layoutY="294.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="264.0" text="Zurück" />
+                  <Separator layoutY="279.0" prefHeight="14.0" prefWidth="600.0" />
+                  <ToggleButton layoutX="470.0" layoutY="141.0" mnemonicParsing="false" text="Eiswürfel" />
+                  <RadioButton layoutX="34.0" layoutY="28.0" mnemonicParsing="false" text="Cola" />
+                  <RadioButton layoutX="34.0" layoutY="65.0" mnemonicParsing="false" text="Fanta" />
+                  <RadioButton layoutX="34.0" layoutY="103.0" mnemonicParsing="false" text="Apfelsaft" />
+                  <RadioButton layoutX="34.0" layoutY="140.0" mnemonicParsing="false" text="Sprite" />
+                  <RadioButton layoutX="34.0" layoutY="178.0" mnemonicParsing="false" text="Wasser" />
+                  <RadioButton layoutX="278.0" layoutY="65.0" mnemonicParsing="false" text="Spezi" />
+                  <RadioButton layoutX="278.0" layoutY="103.0" mnemonicParsing="false" text="Capri-Sonne" />
+                  <RadioButton layoutX="278.0" layoutY="28.0" mnemonicParsing="false" text="Red-Bull" />
+                  <RadioButton layoutX="278.0" layoutY="142.0" mnemonicParsing="false" text="Ayran" />
+                  <RadioButton layoutX="278.0" layoutY="178.0" mnemonicParsing="false" text="Uludag" />
+                  <ComboBox layoutX="430.0" layoutY="66.0" prefWidth="150.0" promptText="Größe" />
+                  <ComboBox layoutX="133.0" layoutY="179.0" prefHeight="29.0" prefWidth="113.0" promptText="Medium/Classic/Still" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab fx:id="warenkorbTab" text="Warenkorb">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="bezahlen" layoutX="307.0" layoutY="294.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="278.0" text="Bezahlen" />
+                  <Button fx:id="warenkorbZurueck" layoutX="14.0" layoutY="294.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="264.0" text="Zurück" />
+                  <Separator layoutY="279.0" prefHeight="14.0" prefWidth="600.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
