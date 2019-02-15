@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+<TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
   <tabs>
     <Tab fx:id="hauptspeiseTab" text="Hauptspeise">
       <content>
@@ -40,21 +40,21 @@
                   <Button fx:id="beilageWeiter" layoutX="307.0" layoutY="294.0" mnemonicParsing="false" onAction="#beilageWeiterClicked" prefHeight="32.0" prefWidth="278.0" text="Weiter" />
                   <Button fx:id="beilageZurueck" layoutX="14.0" layoutY="294.0" mnemonicParsing="false" onAction="#beilageZurueckClicked" prefHeight="32.0" prefWidth="264.0" text="Zurück" />
                   <Separator layoutY="279.0" prefHeight="14.0" prefWidth="600.0" />
-                  <CheckBox layoutX="39.0" layoutY="33.0" mnemonicParsing="false" text="Pommes" />
-                  <CheckBox layoutX="39.0" layoutY="75.0" mnemonicParsing="false" text="Nudeln" />
-                  <CheckBox layoutX="39.0" layoutY="115.0" mnemonicParsing="false" text="Spätzle" />
-                  <CheckBox layoutX="39.0" layoutY="157.0" mnemonicParsing="false" text="Kroketten" />
-                  <CheckBox layoutX="238.0" layoutY="33.0" mnemonicParsing="false" text="Reis" />
-                  <CheckBox layoutX="238.0" layoutY="75.0" mnemonicParsing="false" text="Gemüse" />
-                  <CheckBox layoutX="238.0" layoutY="115.0" mnemonicParsing="false" text="Salat" />
-                  <CheckBox layoutX="39.0" layoutY="197.0" mnemonicParsing="false" text="Kartoffelbrei" />
-                  <CheckBox layoutX="238.0" layoutY="197.0" mnemonicParsing="false" text="Popcorn" />
-                  <CheckBox layoutX="238.0" layoutY="157.0" mnemonicParsing="false" text="Suppe" />
-                  <CheckBox layoutX="425.0" layoutY="108.0" mnemonicParsing="false" text="Rahmsoße" />
-                  <CheckBox layoutX="425.0" layoutY="141.0" mnemonicParsing="false" text="Jägersoße" />
-                  <CheckBox layoutX="425.0" layoutY="177.0" mnemonicParsing="false" text="Bratensoße" />
-                  <Separator layoutX="374.0" layoutY="85.0" prefWidth="200.0" />
-                  <Label layoutX="435.0" layoutY="40.0" prefHeight="35.0" prefWidth="78.0" text="Soßen" textAlignment="CENTER">
+                  <CheckBox layoutX="51.0" layoutY="31.0" mnemonicParsing="false" text="Pommes" />
+                  <CheckBox layoutX="50.0" layoutY="88.0" mnemonicParsing="false" text="Nudeln" />
+                  <CheckBox layoutX="262.0" layoutY="31.0" mnemonicParsing="false" text="Spätzle" />
+                  <CheckBox layoutX="362.0" layoutY="31.0" mnemonicParsing="false" text="Kroketten" />
+                  <CheckBox layoutX="161.0" layoutY="30.0" mnemonicParsing="false" text="Reis" />
+                  <CheckBox layoutX="160.0" layoutY="87.0" mnemonicParsing="false" text="Gemüse" />
+                  <CheckBox layoutX="261.0" layoutY="90.0" mnemonicParsing="false" text="Salat" />
+                  <CheckBox layoutX="361.0" layoutY="91.0" mnemonicParsing="false" text="Kartoffelbrei" />
+                  <CheckBox layoutX="482.0" layoutY="90.0" mnemonicParsing="false" text="Popcorn" />
+                  <CheckBox layoutX="483.0" layoutY="31.0" mnemonicParsing="false" text="Suppe" />
+                  <CheckBox layoutX="105.0" layoutY="210.0" mnemonicParsing="false" text="Rahmsoße" />
+                  <CheckBox layoutX="244.0" layoutY="210.0" mnemonicParsing="false" text="Jägersoße" />
+                  <CheckBox layoutX="378.0" layoutY="210.0" mnemonicParsing="false" text="Bratensoße" />
+                  <Separator layoutX="96.0" layoutY="191.0" prefHeight="12.0" prefWidth="388.0" />
+                  <Label layoutX="251.0" layoutY="149.0" prefHeight="41.0" prefWidth="78.0" text="Soßen" textAlignment="CENTER">
                      <font>
                         <Font size="24.0" />
                      </font></Label>
@@ -68,22 +68,22 @@
                   <Button fx:id="getraenkeWeiter" layoutX="307.0" layoutY="294.0" mnemonicParsing="false" onAction="#GetraenkeWeiterClicked" prefHeight="32.0" prefWidth="278.0" text="Weiter" />
                   <Button fx:id="getraenkeZurueck" layoutX="14.0" layoutY="294.0" mnemonicParsing="false" onAction="#GetraenkeZurueckClicked" prefHeight="32.0" prefWidth="264.0" text="Zurück" />
                   <Separator layoutY="279.0" prefHeight="14.0" prefWidth="600.0" />
-                  <ToggleButton layoutX="470.0" layoutY="141.0" mnemonicParsing="false" text="Eiswürfel" />
-                  <RadioButton layoutX="34.0" layoutY="28.0" mnemonicParsing="false" text="Cola">
+                  <ToggleButton layoutX="344.0" layoutY="215.0" mnemonicParsing="false" text="Eiswürfel" />
+                  <RadioButton layoutX="338.0" layoutY="35.0" mnemonicParsing="false" text="Cola">
                      <toggleGroup>
                         <ToggleGroup fx:id="getr" />
                      </toggleGroup></RadioButton>
-                  <RadioButton layoutX="34.0" layoutY="65.0" mnemonicParsing="false" text="Fanta" toggleGroup="$getr" />
-                  <RadioButton layoutX="34.0" layoutY="103.0" mnemonicParsing="false" text="Apfelsaft" toggleGroup="$getr" />
-                  <RadioButton layoutX="34.0" layoutY="140.0" mnemonicParsing="false" text="Sprite" toggleGroup="$getr" />
-                  <RadioButton layoutX="34.0" layoutY="178.0" mnemonicParsing="false" text="Wasser" toggleGroup="$getr" />
-                  <RadioButton layoutX="278.0" layoutY="65.0" mnemonicParsing="false" text="Spezi" toggleGroup="$getr" />
-                  <RadioButton layoutX="278.0" layoutY="103.0" mnemonicParsing="false" text="Capri-Sonne" toggleGroup="$getr" />
-                  <RadioButton layoutX="278.0" layoutY="28.0" mnemonicParsing="false" text="Red-Bull" toggleGroup="$getr" />
-                  <RadioButton layoutX="278.0" layoutY="142.0" mnemonicParsing="false" text="Ayran" toggleGroup="$getr" />
-                  <RadioButton layoutX="278.0" layoutY="178.0" mnemonicParsing="false" text="Uludag" toggleGroup="$getr" />
-                  <ComboBox layoutX="430.0" layoutY="66.0" prefWidth="150.0" promptText="Größe" />
-                  <ComboBox layoutX="111.0" layoutY="173.0" prefHeight="29.0" prefWidth="153.0" promptText="Medium/Classic/Still" />
+                  <RadioButton layoutX="57.0" layoutY="35.0" mnemonicParsing="false" text="Fanta" toggleGroup="$getr" />
+                  <RadioButton layoutX="57.0" layoutY="73.0" mnemonicParsing="false" text="Apfelsaft" toggleGroup="$getr" />
+                  <RadioButton layoutX="202.0" layoutY="111.0" mnemonicParsing="false" text="Sprite" toggleGroup="$getr" />
+                  <RadioButton layoutX="339.0" layoutY="111.0" mnemonicParsing="false" text="Wasser" toggleGroup="$getr" />
+                  <RadioButton layoutX="203.0" layoutY="73.0" mnemonicParsing="false" text="Spezi" toggleGroup="$getr" />
+                  <RadioButton layoutX="57.0" layoutY="111.0" mnemonicParsing="false" text="Capri-Sonne" toggleGroup="$getr" />
+                  <RadioButton layoutX="203.0" layoutY="35.0" mnemonicParsing="false" text="Red-Bull" toggleGroup="$getr" />
+                  <RadioButton layoutX="339.0" layoutY="73.0" mnemonicParsing="false" text="Ayran" toggleGroup="$getr" />
+                  <ComboBox layoutX="102.0" layoutY="216.0" prefWidth="150.0" promptText="Größe" />
+                  <ComboBox layoutX="430.0" layoutY="111.0" prefHeight="29.0" prefWidth="153.0" promptText="Medium/Classic/Still" />
+                  <Separator layoutX="75.0" layoutY="182.0" prefHeight="14.0" prefWidth="380.0" />
                </children>
             </AnchorPane>
         </content>
