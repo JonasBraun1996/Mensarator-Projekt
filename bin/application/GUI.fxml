@@ -46,26 +46,26 @@
                <children>
                   <Button fx:id="beilageWeiter" layoutX="435.0" layoutY="294.0" mnemonicParsing="false" onAction="#beilageWeiterClicked" prefHeight="32.0" prefWidth="150.0" text="Weiter" />
                   <Button fx:id="beilageZurueck" layoutX="14.0" layoutY="294.0" mnemonicParsing="false" onAction="#beilageZurueckClicked" prefHeight="32.0" prefWidth="150.0" text="Zurück" />
-                  <Separator layoutY="279.0" prefHeight="14.0" prefWidth="600.0" />
-                  <CheckBox layoutX="51.0" layoutY="31.0" mnemonicParsing="false" text="Pommes" />
-                  <CheckBox layoutX="50.0" layoutY="88.0" mnemonicParsing="false" text="Nudeln" />
-                  <CheckBox layoutX="262.0" layoutY="31.0" mnemonicParsing="false" text="Spätzle" />
-                  <CheckBox layoutX="362.0" layoutY="31.0" mnemonicParsing="false" text="Kroketten" />
-                  <CheckBox layoutX="161.0" layoutY="30.0" mnemonicParsing="false" text="Reis" />
-                  <CheckBox layoutX="160.0" layoutY="87.0" mnemonicParsing="false" text="Gemüse" />
-                  <CheckBox layoutX="261.0" layoutY="90.0" mnemonicParsing="false" text="Salat" />
-                  <CheckBox layoutX="361.0" layoutY="91.0" mnemonicParsing="false" text="Kartoffelbrei" />
-                  <CheckBox layoutX="482.0" layoutY="90.0" mnemonicParsing="false" text="Popcorn" />
-                  <CheckBox layoutX="483.0" layoutY="31.0" mnemonicParsing="false" text="Suppe" />
-                  <CheckBox layoutX="105.0" layoutY="210.0" mnemonicParsing="false" text="Rahmsoße" />
-                  <CheckBox layoutX="244.0" layoutY="210.0" mnemonicParsing="false" text="Jägersoße" />
-                  <CheckBox layoutX="378.0" layoutY="210.0" mnemonicParsing="false" text="Bratensoße" />
+                  <Separator layoutX="-11.0" layoutY="273.0" prefHeight="14.0" prefWidth="600.0" />
+                  <CheckBox fx:id="Pommes" layoutX="51.0" layoutY="31.0" mnemonicParsing="false" onAction="#Preisberechnen" text="Pommes&#10;1,50€" />
+                  <CheckBox fx:id="Nudeln" layoutX="50.0" layoutY="88.0" mnemonicParsing="false" onAction="#Preisberechnen" text="Nudeln&#10;1,20€" />
+                  <CheckBox fx:id="Spätzle" layoutX="262.0" layoutY="31.0" mnemonicParsing="false" onAction="#Preisberechnen" text="Spätzle&#10;1,30€" />
+                  <CheckBox fx:id="Kroketten" layoutX="362.0" layoutY="31.0" mnemonicParsing="false" onAction="#Preisberechnen" text="Kroketten&#10;1,50€" />
+                  <CheckBox fx:id="Reis" layoutX="161.0" layoutY="30.0" mnemonicParsing="false" onAction="#Preisberechnen" text="Reis&#10;1,10€" />
+                  <CheckBox fx:id="Gemüse" layoutX="160.0" layoutY="87.0" mnemonicParsing="false" onAction="#Preisberechnen" text="Gemüse&#10;1,20€" />
+                  <CheckBox fx:id="Salat" layoutX="261.0" layoutY="90.0" mnemonicParsing="false" onAction="#Preisberechnen" text="Salat&#10;1,50€" />
+                  <CheckBox fx:id="Kartoffelbrei" layoutX="361.0" layoutY="91.0" mnemonicParsing="false" onAction="#Preisberechnen" text="Kartoffelbrei&#10;1,60€" />
+                  <CheckBox fx:id="Popcorn" layoutX="482.0" layoutY="90.0" mnemonicParsing="false" onAction="#Preisberechnen" text="Popcorn&#10;1,60€" />
+                  <CheckBox fx:id="Suppe" layoutX="483.0" layoutY="31.0" mnemonicParsing="false" onAction="#Preisberechnen" text="Suppe&#10;1,00€" />
+                  <CheckBox fx:id="Rahmsoße" layoutX="105.0" layoutY="210.0" mnemonicParsing="false" onAction="#Preisberechnen" text="Rahmsoße&#10;0,70€" />
+                  <CheckBox fx:id="Jägersoße" layoutX="244.0" layoutY="210.0" mnemonicParsing="false" onAction="#Preisberechnen" text="Jägersoße&#10;0,80€" />
+                  <CheckBox fx:id="Bratensoße" layoutX="378.0" layoutY="210.0" mnemonicParsing="false" onAction="#Preisberechnen" text="Bratensoße&#10;0,70€" />
                   <Separator layoutX="96.0" layoutY="191.0" prefHeight="12.0" prefWidth="388.0" />
                   <Label layoutX="251.0" layoutY="149.0" prefHeight="41.0" prefWidth="78.0" text="Soßen" textAlignment="CENTER">
                      <font>
                         <Font size="24.0" />
                      </font></Label>
-                  <TextArea layoutX="225.0" layoutY="288.0" prefHeight="40.0" prefWidth="150.0" />
+                  <TextArea fx:id="Summenfeld" layoutX="229.0" layoutY="294.0" prefHeight="43.0" prefWidth="152.0" />
                </children></AnchorPane>
       </content>
     </Tab>
