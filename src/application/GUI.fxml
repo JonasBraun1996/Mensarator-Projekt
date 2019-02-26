@@ -33,7 +33,7 @@
                   </Button>
                   <ImageView fitHeight="214.0" fitWidth="256.0" layoutX="181.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../Desktop/dino.gif" />
+                        <Image url="@../../bin/application/dino.gif" />
                      </image>
                   </ImageView>
                   <Label layoutX="34.0" prefHeight="86.0" prefWidth="533.0" text="Willkommen beim Mensarator!">

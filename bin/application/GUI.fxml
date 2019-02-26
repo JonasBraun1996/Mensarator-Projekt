@@ -75,7 +75,7 @@
                      <font>
                         <Font size="24.0" />
                      </font></Label>
-                  <TextArea fx:id="SummenfeldBL" layoutX="229.0" layoutY="303.0" prefHeight="40.0" prefWidth="150.0" />
+                  <TextArea fx:id="SummenfeldBL" layoutX="225.0" layoutY="303.0" prefHeight="40.0" prefWidth="150.0" />
                   <RadioButton fx:id="Pommes" layoutX="46.0" layoutY="31.0" mnemonicParsing="false" onAction="#PreisberechnenBL" text="Pommes&#10;1,50€" />
                   <RadioButton fx:id="Reis" layoutX="150.0" layoutY="31.0" mnemonicParsing="false" onAction="#PreisberechnenBL" text="Reis&#10;1,10€" />
                   <RadioButton fx:id="Spaetzle" layoutX="235.0" layoutY="31.0" mnemonicParsing="false" onAction="#PreisberechnenBL" text="Spätzle&#10;1,30€" />
