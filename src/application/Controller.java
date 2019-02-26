@@ -2,11 +2,15 @@ package application;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextArea;
+import javafx.stage.Stage;
 
 public class Controller {
 
@@ -24,12 +28,25 @@ public class Controller {
 
 	@FXML
 	private Tab beilageTab;
+	
+	@FXML
+	private Tab StartseiteTab;
 
 	@FXML
 	private Button beilageWeiter;
 
 	@FXML
 	private Button beilageZurueck;
+	
+	@FXML
+	private Button meineBestellungZurueckBtn;
+	
+	@FXML
+	private Button bezahlungBeendenBtn;
+	
+	@FXML
+	private Button meineBestellungBtn;
+	
 
 	@FXML
 	private Tab getraenkeTab;
@@ -39,6 +56,15 @@ public class Controller {
 
 	@FXML
 	private Button getraenkeZurueck;
+	
+	@FXML
+	private Button konfigStartenBtn;
+	
+	@FXML
+	private Button bezahlenBtn;
+	
+	@FXML
+	private Tab Startseite;
 
 	@FXML
 	private Tab warenkorbTab;
@@ -109,6 +135,109 @@ public class Controller {
 	void hauptspeiseWeiterClicked(ActionEvent event) {
 
 		tabPane.getSelectionModel().select(beilageTab);
+
+	}
+	
+	@FXML
+	void zurHauptspeiseOnClicked(ActionEvent event) {
+
+		tabPane.getSelectionModel().select(hauptspeiseTab);
+	}
+	
+	@FXML
+	void meineBestellungWindowOnClick(ActionEvent event) {
+
+		try 
+		{
+			FXMLLoader order = new FXMLLoader(getClass().getResource("MYORDER.fxml"));
+			Parent root = (Parent) order.load();
+			Stage stage = new Stage();
+			stage.setScene(new Scene(root));
+			stage.show();
+
+		}
+		catch(Exception e) 
+		{
+			e.printStackTrace();
+		}
+		
+		//Fenster nach verlassen schlieﬂen
+		Stage close = (Stage) meineBestellungBtn.getScene().getWindow();
+	    close.close();
+	}
+	
+	
+	@FXML
+	void meineBestellungZurueckBtnOnClicked(ActionEvent event) {
+
+		try 
+		{
+			FXMLLoader order = new FXMLLoader(getClass().getResource("GUI.fxml"));
+			Parent root = (Parent) order.load();
+			Stage stage = new Stage();
+			stage.setScene(new Scene(root));
+			stage.show();
+
+		}
+		catch(Exception e) 
+		{
+			e.printStackTrace();
+		}
+		
+		//Fenster nach verlassen schlieﬂen
+		Stage close = (Stage) meineBestellungZurueckBtn.getScene().getWindow();
+	    close.close();
+	}
+	
+	@FXML
+	void bezahlenOnClicked(ActionEvent event) {
+
+		try 
+		{
+			FXMLLoader order = new FXMLLoader(getClass().getResource("PAY.fxml"));
+			Parent root = (Parent) order.load();
+			Stage stage = new Stage();
+			stage.setScene(new Scene(root));
+			stage.show();
+
+		}
+		catch(Exception e) 
+		{
+			e.printStackTrace();
+		}
+		
+		//Fenster nach verlassen schlieﬂen
+		Stage close = (Stage) bezahlenBtn.getScene().getWindow();
+	    close.close();
+	}
+	
+	@FXML
+	void bezahlungBeendenBtnOnClicked(ActionEvent event) {
+
+		try 
+		{
+			FXMLLoader order = new FXMLLoader(getClass().getResource("GUI.fxml"));
+			Parent root = (Parent) order.load();
+			Stage stage = new Stage();
+			stage.setScene(new Scene(root));
+			stage.show();
+
+		}
+		catch(Exception e) 
+		{
+			e.printStackTrace();
+		}
+		
+		//Fenster nach verlassen schlieﬂen
+		Stage close = (Stage) bezahlungBeendenBtn.getScene().getWindow();
+	    close.close();
+	}
+	
+	
+	@FXML
+	void ZurueckZurStartseite(ActionEvent event) {
+
+		tabPane.getSelectionModel().select(StartseiteTab);
 
 	}
 

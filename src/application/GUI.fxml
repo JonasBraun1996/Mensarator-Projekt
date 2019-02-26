@@ -10,23 +10,47 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+<TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
   <tabs>
-      <Tab text="Startseite">
+      <Tab fx:id="StartseiteTab" text="Startseite">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="konfigStartenBtn" layoutX="172.0" layoutY="239.0" mnemonicParsing="false" onAction="#zurHauptspeiseOnClicked" prefHeight="56.0" prefWidth="214.0" text="Konfiguration starten">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="meineBestellungBtn" layoutX="172.0" layoutY="305.0" mnemonicParsing="false" onAction="#meineBestellungWindowOnClick" prefHeight="56.0" prefWidth="214.0" text="Meine Bestellungen">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="214.0" fitWidth="256.0" layoutX="181.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Desktop/dino.gif" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="34.0" prefHeight="86.0" prefWidth="533.0" text="Willkommen beim Mensarator!">
+                     <font>
+                        <Font size="39.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
         </content>
       </Tab>
     <Tab fx:id="hauptspeiseTab" text="Hauptspeise">
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="startseite" layoutX="14.0" layoutY="294.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="150.0" text="Startseite" />
+                  <Button fx:id="startseite" layoutX="14.0" layoutY="303.0" mnemonicParsing="false" onAction="#ZurueckZurStartseite" prefHeight="40.0" prefWidth="150.0" text="Startseite" />
                   <Separator layoutY="279.0" prefHeight="14.0" prefWidth="600.0" />
-                  <Button fx:id="hauptspeiseWeiter" layoutX="436.0" layoutY="294.0" mnemonicParsing="false" onAction="#hauptspeiseWeiterClicked" prefHeight="32.0" prefWidth="150.0" text="Weiter" />
+                  <Button fx:id="hauptspeiseWeiter" layoutX="436.0" layoutY="303.0" mnemonicParsing="false" onAction="#hauptspeiseWeiterClicked" prefHeight="40.0" prefWidth="150.0" text="Weiter" />
                   <RadioButton fx:id="Menue1" layoutX="52.0" layoutY="8.0" mnemonicParsing="false" onAction="#PreisberechnenHS" text="Menü 1&#10;2,00€">
                      <toggleGroup>
                         <ToggleGroup fx:id="menue" />
@@ -35,7 +59,7 @@
                   <RadioButton fx:id="Menue3" layoutX="455.0" layoutY="8.0" mnemonicParsing="false" onAction="#PreisberechnenHS" text="Menü 3&#10;1,90€" toggleGroup="$menue" />
                   <Separator layoutX="201.0" layoutY="9.0" orientation="VERTICAL" prefHeight="270.0" prefWidth="0.0" />
                   <Separator layoutX="402.0" layoutY="8.0" orientation="VERTICAL" prefHeight="272.0" prefWidth="6.0" />
-                  <TextArea fx:id="SummefeldHS" layoutX="225.0" layoutY="288.0" prefHeight="40.0" prefWidth="150.0" />
+                  <TextArea fx:id="SummefeldHS" layoutX="225.0" layoutY="303.0" prefHeight="40.0" prefWidth="150.0" />
                </children></AnchorPane>
       </content>
     </Tab>
@@ -43,15 +67,15 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="beilageWeiter" layoutX="435.0" layoutY="294.0" mnemonicParsing="false" onAction="#beilageWeiterClicked" prefHeight="32.0" prefWidth="150.0" text="Weiter" />
-                  <Button fx:id="beilageZurueck" layoutX="14.0" layoutY="294.0" mnemonicParsing="false" onAction="#beilageZurueckClicked" prefHeight="32.0" prefWidth="150.0" text="Zurück" />
-                  <Separator layoutX="-11.0" layoutY="273.0" prefHeight="14.0" prefWidth="600.0" />
+                  <Button fx:id="beilageWeiter" layoutX="435.0" layoutY="303.0" mnemonicParsing="false" onAction="#beilageWeiterClicked" prefHeight="40.0" prefWidth="150.0" text="Weiter" />
+                  <Button fx:id="beilageZurueck" layoutX="14.0" layoutY="303.0" mnemonicParsing="false" onAction="#beilageZurueckClicked" prefHeight="40.0" prefWidth="150.0" text="Zurück" />
+                  <Separator layoutY="279.0" prefHeight="14.0" prefWidth="600.0" />
                   <Separator layoutX="96.0" layoutY="191.0" prefHeight="12.0" prefWidth="388.0" />
                   <Label layoutX="251.0" layoutY="149.0" prefHeight="41.0" prefWidth="78.0" text="Soßen" textAlignment="CENTER">
                      <font>
                         <Font size="24.0" />
                      </font></Label>
-                  <TextArea fx:id="SummenfeldBL" layoutX="229.0" layoutY="294.0" prefHeight="43.0" prefWidth="152.0" />
+                  <TextArea fx:id="SummenfeldBL" layoutX="225.0" layoutY="303.0" prefHeight="40.0" prefWidth="150.0" />
                   <RadioButton fx:id="Pommes" layoutX="46.0" layoutY="31.0" mnemonicParsing="false" onAction="#PreisberechnenBL" text="Pommes&#10;1,50€" />
                   <RadioButton fx:id="Reis" layoutX="150.0" layoutY="31.0" mnemonicParsing="false" onAction="#PreisberechnenBL" text="Reis&#10;1,10€" />
                   <RadioButton fx:id="Spaetzle" layoutX="235.0" layoutY="31.0" mnemonicParsing="false" onAction="#PreisberechnenBL" text="Spätzle&#10;1,30€" />
@@ -76,8 +100,8 @@
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="getraenkeWeiter" layoutX="435.0" layoutY="294.0" mnemonicParsing="false" onAction="#GetraenkeWeiterClicked" prefHeight="32.0" prefWidth="150.0" text="Weiter" />
-                  <Button fx:id="getraenkeZurueck" layoutX="14.0" layoutY="294.0" mnemonicParsing="false" onAction="#GetraenkeZurueckClicked" prefHeight="32.0" prefWidth="150.0" text="Zurück" />
+                  <Button fx:id="getraenkeWeiter" layoutX="435.0" layoutY="303.0" mnemonicParsing="false" onAction="#GetraenkeWeiterClicked" prefHeight="40.0" prefWidth="150.0" text="Weiter" />
+                  <Button fx:id="getraenkeZurueck" layoutX="14.0" layoutY="303.0" mnemonicParsing="false" onAction="#GetraenkeZurueckClicked" prefHeight="40.0" prefWidth="150.0" text="Zurück" />
                   <Separator layoutY="279.0" prefHeight="14.0" prefWidth="600.0" />
                   <ToggleButton layoutX="344.0" layoutY="215.0" mnemonicParsing="false" text="Eiswürfel" />
                   <RadioButton layoutX="338.0" layoutY="35.0" mnemonicParsing="false" text="Cola">
@@ -95,7 +119,7 @@
                   <ComboBox layoutX="102.0" layoutY="216.0" prefWidth="150.0" promptText="Größe" />
                   <ComboBox layoutX="430.0" layoutY="111.0" prefHeight="29.0" prefWidth="153.0" promptText="Medium/Classic/Still" />
                   <Separator layoutX="75.0" layoutY="182.0" prefHeight="14.0" prefWidth="380.0" />
-                  <TextArea fx:id="SummenfeldGetränk" layoutX="225.0" layoutY="288.0" prefHeight="40.0" prefWidth="150.0" />
+                  <TextArea fx:id="SummenfeldGetränk" layoutX="225.0" layoutY="303.0" prefHeight="40.0" prefWidth="150.0" />
                </children>
             </AnchorPane>
         </content>
@@ -104,10 +128,10 @@
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="bezahlen" layoutX="435.0" layoutY="294.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="150.0" text="Bezahlen" />
-                  <Button fx:id="warenkorbZurueck" layoutX="14.0" layoutY="294.0" mnemonicParsing="false" onAction="#WarenkorbZurueckClicked" prefHeight="32.0" prefWidth="150.0" text="Zurück" />
+                  <Button fx:id="bezahlenBtn" layoutX="435.0" layoutY="303.0" mnemonicParsing="false" onAction="#bezahlenOnClicked" prefHeight="40.0" prefWidth="150.0" text="Bezahlen" />
+                  <Button fx:id="warenkorbZurueck" layoutX="14.0" layoutY="303.0" mnemonicParsing="false" onAction="#WarenkorbZurueckClicked" prefHeight="40.0" prefWidth="150.0" text="Zurück" />
                   <Separator layoutY="279.0" prefHeight="14.0" prefWidth="600.0" />
-                  <TextArea layoutX="225.0" layoutY="288.0" prefHeight="40.0" prefWidth="150.0" />
+                  <TextArea layoutX="225.0" layoutY="303.0" prefHeight="40.0" prefWidth="150.0" />
                </children>
             </AnchorPane>
         </content>
