@@ -1,13 +1,12 @@
 package application;
 
-import javax.swing.ButtonGroup;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 
 public class Controller {
@@ -54,46 +53,58 @@ public class Controller {
 	// Komponenten
 
 	@FXML
-	private CheckBox Pommes;
+	private RadioButton Pommes;
 
 	@FXML
-	private CheckBox Reis;
+	private RadioButton Reis;
 
 	@FXML
-	private CheckBox Spätzle;
+	private RadioButton Spaetzle;
 
 	@FXML
-	private CheckBox Kroketten;
+	private RadioButton Kroketten;
 
 	@FXML
-	private CheckBox Suppe;
+	private RadioButton Suppe;
 
 	@FXML
-	private CheckBox Nudeln;
+	private RadioButton Nudeln;
 
 	@FXML
-	private CheckBox Gemüse;
+	private RadioButton Gemuese;
 
 	@FXML
-	private CheckBox Salat;
+	private RadioButton Salat;
 
 	@FXML
-	private CheckBox Kartoffelbrei;
+	private RadioButton Kartoffelbrei;
 
 	@FXML
-	private CheckBox Popcorn;
+	private RadioButton Popcorn;
 
 	@FXML
-	private CheckBox Rahmsoße;
+	private RadioButton Rahmsoße;
 
 	@FXML
-	private CheckBox Jägersoße;
+	private RadioButton Jaegersoße;
 
 	@FXML
-	private CheckBox Bratensoße;
+	private RadioButton Bratensoße;
 
 	@FXML
-	private TextArea Summenfeld;
+	private TextArea SummenfeldBL;
+
+	@FXML
+	private TextArea SummefeldHS;
+
+	@FXML
+	private RadioButton Menue1;
+
+	@FXML
+	private RadioButton Menue2;
+
+	@FXML
+	private RadioButton Menue3;
 
 	@FXML
 	void hauptspeiseWeiterClicked(ActionEvent event) {
@@ -137,46 +148,103 @@ public class Controller {
 
 	}
 
-	double summe = 0;
-	String endsumme = " ";
+	double summeInsgesamt = 0;
 
-	public void Preisberechnen(ActionEvent e) {
+	public void PreisberechnenHS(ActionEvent e) {
 
-		CheckBox cb = (CheckBox) e.getSource();
-		String name = cb.getId();
+		double summeHaupt = 0;
+		String endsummeHaupt = " ";
+
+		RadioButton rb = (RadioButton) e.getSource();
+		String name = rb.getId();
+
+		switch (name) {
+
+		case ("Menue1"):
+
+			if (rb.isSelected() == false)
+				summeHaupt = summeHaupt - 2.00;
+
+			if (rb.isSelected())
+				summeHaupt = summeHaupt + 2.00;
+			break;
+
+		}
+
+		switch (name) {
+
+		case ("Menue2"):
+
+			if (rb.isSelected() == false)
+				summeHaupt = summeHaupt - 2.10;
+
+			if (rb.isSelected())
+				summeHaupt = summeHaupt + 2.10;
+			break;
+
+		}
+
+		switch (name) {
+
+		case ("Menue3"):
+
+			if (rb.isSelected() == false)
+				summeHaupt = summeHaupt - 1.90;
+
+			if (rb.isSelected())
+				summeHaupt = summeHaupt + 1.90;
+			break;
+
+		}
+
+		summeHaupt = Math.round(summeHaupt * 100.0) / 100.0;
+		summeInsgesamt = summeHaupt;
+		endsummeHaupt = Double.toString(summeHaupt);
+		SummefeldHS.setText(endsummeHaupt + "0 €");
+
+	}
+
+	double summeBL=summeInsgesamt;
+	String endsummeBL = " ";
+
+	public void PreisberechnenBL(ActionEvent e) {
+		
+
+		RadioButton rb = (RadioButton) e.getSource();
+		String name = rb.getId();
 
 		switch (name) {
 
 		case ("Pommes"): {
 
-			if (cb.isSelected() == false)
-				summe = summe - 1.5;
+			if (rb.isSelected() == false)
+				summeBL = summeBL - 1.5;
 
-			if (cb.isSelected())
-				summe = summe + 1.5;
+			if (rb.isSelected())
+				summeBL = summeBL + 1.5;
 			break;
 
 		}
 
 		case ("Reis"): {
 
-			if (cb.isSelected() == false)
-				summe = summe - 1.1;
+			if (rb.isSelected() == false)
+				summeBL = summeBL - 1.1;
 
-			if (cb.isSelected())
-				summe = summe + 1.1;
+			if (rb.isSelected())
+				summeBL = summeBL + 1.1;
 
 			break;
 
 		}
 
-		case ("Spätzle"): {
+		case ("Spaetzle"): {
 
-			if (cb.isSelected() == false)
-				summe = summe - 1.3;
+			if (rb.isSelected() == false)
+				summeBL = summeBL - 1.3;
 
-			if (cb.isSelected())
-				summe = summe + 1.3;
+			if (rb.isSelected())
+				summeBL = summeBL + 1.3;
 
 			break;
 
@@ -184,129 +252,145 @@ public class Controller {
 
 		case ("Kroketten"): {
 
-			if (cb.isSelected() == false)
-				summe = summe - 1.5;
+			if (rb.isSelected() == false)
+				summeBL = summeBL - 1.5;
 
-			if (cb.isSelected())
-				summe = summe + 1.5;
+			if (rb.isSelected())
+				summeBL = summeBL + 1.5;
 
 			break;
 
 		}
-		
+
 		case ("Suppe"): {
 
-			if (cb.isSelected() == false)
-				summe = summe - 1.0;
+			if (rb.isSelected() == false)
+				summeBL = summeBL - 1.0;
 
-			if (cb.isSelected())
-				summe = summe + 1.0;
+			if (rb.isSelected())
+				summeBL = summeBL + 1.0;
 
 			break;
 
 		}
-		
+
 		case ("Nudeln"): {
 
-			if (cb.isSelected() == false)
-				summe = summe - 1.2;
+			if (rb.isSelected() == false)
+				summeBL = summeBL - 1.2;
 
-			if (cb.isSelected())
-				summe = summe + 1.2;
-
-			break;
-
-		}
-		
-		case ("Gemüse"): {
-
-			if (cb.isSelected() == false)
-				summe = summe - 1.2;
-
-			if (cb.isSelected())
-				summe = summe + 1.2;
+			if (rb.isSelected())
+				summeBL = summeBL + 1.2;
 
 			break;
 
 		}
-		
+
+		case ("Gemuese"): {
+
+			if (rb.isSelected() == false)
+				summeBL = summeBL - 1.2;
+
+			if (rb.isSelected())
+				summeBL = summeBL + 1.2;
+
+			break;
+
+		}
+
 		case ("Salat"): {
 
-			if (cb.isSelected() == false)
-				summe = summe - 1.5;
+			if (rb.isSelected() == false)
+				summeBL = summeBL - 1.5;
 
-			if (cb.isSelected())
-				summe = summe + 1.5;
+			if (rb.isSelected())
+				summeBL = summeBL + 1.5;
 
 			break;
 
 		}
-		
+
 		case ("Kartoffelbrei"): {
 
-			if (cb.isSelected() == false)
-				summe = summe - 1.6;
+			if (rb.isSelected() == false)
+				summeBL = summeBL - 1.6;
 
-			if (cb.isSelected())
-				summe = summe + 1.6;
+			if (rb.isSelected())
+				summeBL = summeBL + 1.6;
 
 			break;
 
 		}
-		
+
 		case ("Popcorn"): {
 
-			if (cb.isSelected() == false)
-				summe = summe - 1.6;
+			if (rb.isSelected() == false)
+				summeBL = summeBL - 1.6;
 
-			if (cb.isSelected())
-				summe = summe + 1.6;
-
-			break;
-
-		}
-		
-		case ("Rahmsoße"): {
-
-			if (cb.isSelected() == false)
-				summe = summe - 0.7;
-
-			if (cb.isSelected())
-				summe = summe + 0.7;
-
-			break;
-
-		}
-		
-		case ("Jägersoße"): {
-
-			if (cb.isSelected() == false)
-				summe = summe - 0.8;
-
-			if (cb.isSelected())
-				summe = summe + 0.8;
-
-			break;
-
-		}
-		
-		case ("Bratensoße"): {
-
-			if (cb.isSelected() == false)
-				summe = summe - 0.7;
-
-			if (cb.isSelected())
-				summe = summe + 0.7;
+			if (rb.isSelected())
+				summeBL = summeBL + 1.6;
 
 			break;
 
 		}
 
+		}
+		summeBL = Math.round(summeBL * 100.0) / 100.0;
+		endsummeBL = Double.toString(summeBL);
+		SummenfeldBL.setText(endsummeBL + "0 €");
+
+	}
+
+	public void PreisberechnenSoße(ActionEvent e) {
+
+		double summeSoße = summeInsgesamt;
+		String endsummeSoße = " ";
+
+		RadioButton rb = (RadioButton) e.getSource();
+		String name = rb.getId();
+
+		switch (name) {
+
+		case ("Rahmsoße"):
+
+			if (rb.isSelected() == false)
+				summeSoße = summeSoße - 0.7;
+
+			if (rb.isSelected())
+				summeSoße = summeSoße + 0.7;
+			break;
 
 		}
-		summe=Math.round(summe*100.0)/100.0;
-		endsumme = Double.toString(summe);
-		Summenfeld.setText(endsumme+"0 €");
+
+		switch (name) {
+
+		case ("Jaegersoße"):
+
+			if (rb.isSelected() == false)
+				summeSoße = summeSoße - 0.8;
+
+			if (rb.isSelected())
+				summeSoße = summeSoße + 0.8;
+			break;
+
+		}
+
+		switch (name) {
+
+		case ("Bratensoße"):
+
+			if (rb.isSelected() == false)
+				summeSoße = summeSoße - 0.7;
+
+			if (rb.isSelected())
+				summeSoße = summeSoße + 0.7;
+			break;
+
+		}
+
+		summeSoße = Math.round(summeSoße * 100.0) / 100.0;
+		endsummeSoße = Double.toString(summeSoße);
+		SummenfeldBL.setText(endsummeSoße + "0 €");
 
 	}
 
