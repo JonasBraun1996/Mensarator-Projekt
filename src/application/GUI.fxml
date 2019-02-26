@@ -62,13 +62,13 @@
                   <RadioButton fx:id="Salat" layoutX="235.0" layoutY="91.0" mnemonicParsing="false" onAction="#PreisberechnenBL" text="Salat&#10;1,50€" />
                   <RadioButton fx:id="Kartoffelbrei" layoutX="350.0" layoutY="87.0" mnemonicParsing="false" onAction="#PreisberechnenBL" text="Kartoffelbrei&#10;1,60€" />
                   <RadioButton fx:id="Popcorn" layoutX="472.0" layoutY="87.0" mnemonicParsing="false" onAction="#PreisberechnenBL" text="Popcorn&#10;1,60€" />
-                  <RadioButton fx:id="Rahmsoße" layoutX="106.0" layoutY="210.0" mnemonicParsing="false" onAction="#PreisberechnenSoße" text="Rahmsoße&#10;0,70€">
+                  <RadioButton fx:id="Rahmsoße" layoutX="106.0" layoutY="210.0" mnemonicParsing="false" onAction="#PreisberechnenSosse" text="Rahmsoße&#10;0,70€">
                      <toggleGroup>
                         <ToggleGroup fx:id="soße" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton fx:id="Jaegersoße" layoutX="246.0" layoutY="210.0" mnemonicParsing="false" onAction="#PreisberechnenSoße" text="Jägersoße&#10;0,80€" toggleGroup="$soße" />
-                  <RadioButton fx:id="Bratensoße" layoutX="381.0" layoutY="210.0" mnemonicParsing="false" onAction="#PreisberechnenSoße" text="Bratensoße&#10;0,70€" toggleGroup="$soße" />
+                  <RadioButton fx:id="Jaegersoße" layoutX="246.0" layoutY="210.0" mnemonicParsing="false" onAction="#PreisberechnenSosse" text="Jägersoße&#10;0,80€" toggleGroup="$soße" />
+                  <RadioButton fx:id="Bratensoße" layoutX="381.0" layoutY="210.0" mnemonicParsing="false" onAction="#PreisberechnenSosse" text="Bratensoße&#10;0,70€" toggleGroup="$soße" />
                </children></AnchorPane>
       </content>
     </Tab>

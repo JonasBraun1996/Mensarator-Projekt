@@ -3,10 +3,9 @@ package application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 
 public class Controller {
@@ -200,7 +199,7 @@ public class Controller {
 		summeHaupt = Math.round(summeHaupt * 100.0) / 100.0;
 		summeInsgesamt = summeHaupt;
 		endsummeHaupt = Double.toString(summeHaupt);
-		SummefeldHS.setText(endsummeHaupt + "0 €");
+		SummefeldHS.setText(endsummeHaupt + "0 �");
 
 	}
 
@@ -337,60 +336,60 @@ public class Controller {
 		}
 		summeBL = Math.round(summeBL * 100.0) / 100.0;
 		endsummeBL = Double.toString(summeBL);
-		SummenfeldBL.setText(endsummeBL + "0 €");
+		SummenfeldBL.setText(endsummeBL + "0 �");
 
 	}
 
-	public void PreisberechnenSoße(ActionEvent e) {
+	public void PreisberechnenSosse(ActionEvent e) {
 
-		double summeSoße = summeInsgesamt;
-		String endsummeSoße = " ";
+		double summeSosse = summeInsgesamt;
+		String endsummeSosse = " ";
 
 		RadioButton rb = (RadioButton) e.getSource();
 		String name = rb.getId();
 
 		switch (name) {
 
-		case ("Rahmsoße"):
+		case ("Rahmso�e"):
 
 			if (rb.isSelected() == false)
-				summeSoße = summeSoße - 0.7;
+				summeSosse = summeSosse - 0.7;
 
 			if (rb.isSelected())
-				summeSoße = summeSoße + 0.7;
+				summeSosse = summeSosse + 0.7;
 			break;
 
 		}
 
 		switch (name) {
 
-		case ("Jaegersoße"):
+		case ("Jaegerso�e"):
 
 			if (rb.isSelected() == false)
-				summeSoße = summeSoße - 0.8;
+				summeSosse = summeSosse - 0.8;
 
 			if (rb.isSelected())
-				summeSoße = summeSoße + 0.8;
+				summeSosse = summeSosse + 0.8;
 			break;
 
 		}
 
 		switch (name) {
 
-		case ("Bratensoße"):
+		case ("Bratenso�e"):
 
 			if (rb.isSelected() == false)
-				summeSoße = summeSoße - 0.7;
+				summeSosse = summeSosse - 0.7;
 
 			if (rb.isSelected())
-				summeSoße = summeSoße + 0.7;
+				summeSosse = summeSosse + 0.7;
 			break;
 
 		}
 
-		summeSoße = Math.round(summeSoße * 100.0) / 100.0;
-		endsummeSoße = Double.toString(summeSoße);
-		SummenfeldBL.setText(endsummeSoße + "0 €");
+		summeSosse = Math.round(summeSosse * 100.0) / 100.0;
+		endsummeSosse = Double.toString(summeSosse);
+		SummenfeldBL.setText(endsummeSosse + "0 �");
 
 	}
 
