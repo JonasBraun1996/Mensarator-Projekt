@@ -125,7 +125,7 @@ public class Controller {
 	private TextArea SummefeldHS;
 
 	@FXML
-	private TextArea SummenfeldGetränk;
+	private TextArea SummenfeldGetraenk;
 
 	@FXML
 	private RadioButton Menue1;
@@ -314,7 +314,7 @@ public class Controller {
 		ausgabe = Double.toString(s);
 		SummenfeldBL.setText(ausgabe + "0 Euro");
 		SummefeldHS.setText(ausgabe + "0 Euro");
-		SummenfeldGetränk.setText(ausgabe + "0 Euro");
+		SummenfeldGetraenk.setText(ausgabe + "0 Euro");
 
 	}
 
@@ -330,7 +330,7 @@ public class Controller {
 		ausgabe = Double.toString(s);
 		SummefeldHS.setText(ausgabe + "0 Euro");
 		SummenfeldBL.setText(ausgabe + "0 Euro");
-		SummenfeldGetränk.setText(ausgabe + "0 Euro");
+		SummenfeldGetraenk.setText(ausgabe + "0 Euro");
 
 	}
 

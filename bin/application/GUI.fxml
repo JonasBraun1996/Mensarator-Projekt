@@ -112,7 +112,7 @@
                   <ComboBox layoutX="102.0" layoutY="216.0" prefWidth="150.0" promptText="Größe" />
                   <ComboBox layoutX="430.0" layoutY="111.0" prefHeight="29.0" prefWidth="153.0" promptText="Medium/Classic/Still" />
                   <Separator layoutX="75.0" layoutY="182.0" prefHeight="14.0" prefWidth="380.0" />
-                  <TextArea fx:id="SummenfeldGetränk" layoutX="225.0" layoutY="303.0" prefHeight="40.0" prefWidth="150.0" />
+                  <TextArea fx:id="SummenfeldGetraenk" layoutX="225.0" layoutY="303.0" prefHeight="40.0" prefWidth="150.0" />
                </children>
             </AnchorPane>
         </content>
