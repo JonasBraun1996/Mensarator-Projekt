@@ -10,6 +10,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.ToggleGroup;
 import javafx.stage.Stage;
 
 public class Controller {
@@ -31,7 +32,9 @@ public class Controller {
 
 	@FXML
 	private Tab StartseiteTab;
-
+	@FXML
+	private ToggleGroup menue;
+	
 	@FXML
 	private Button beilageWeiter;
 

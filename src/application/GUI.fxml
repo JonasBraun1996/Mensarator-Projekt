@@ -92,7 +92,7 @@
                </children></AnchorPane>
       </content>
     </Tab>
-      <Tab fx:id="getraenkeTab" onSelectionChanged="#PreisberechnenBL" text="Getränke">
+      <Tab fx:id="getraenkeTab" text="Getränke">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
