@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="footer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="172.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="footer.Controllerfooter">
+   <children>
+      <TextArea fx:id="Summenfeld" layoutX="194.0" layoutY="54.0" prefHeight="65.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>
