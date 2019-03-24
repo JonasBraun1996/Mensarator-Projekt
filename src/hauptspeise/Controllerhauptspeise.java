@@ -5,7 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import client.Controllerclient;
-import client.Main;
+import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -52,14 +52,14 @@ public class Controllerhauptspeise {
 		  
 		 case ("Menue1"): {
 		  
-		 Main.summeGroup(2.0, rb);
+//		 Main.summeGroup(2.0, rb);
 		 break;
 		 
 		 }
 		
 		  case ("Menue2"): {
 		  
-		  Main.summeGroup(2.1, rb);
+//		  Main.summeGroup(2.1, rb);
 		  
 		  break;
 		  
@@ -67,7 +67,7 @@ public class Controllerhauptspeise {
 		  
 		  case ("Menue3"): {
 		  
-		  Main.summeGroup(1.9, rb); break;
+//		  Main.summeGroup(1.9, rb); break;
 		  
 		  } }
 		 

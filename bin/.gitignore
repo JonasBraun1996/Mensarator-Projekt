@@ -1,10 +1,10 @@
 /.DS_Store
 /application/
-/hauptspeise/
 /beilage/
-/getraenke/
-/startseite/
-/footer/
-/warenkorb/
-/menubar/
 /client/
+/footer/
+/getraenke/
+/hauptspeise/
+/menubar/
+/startseite/
+/warenkorb/

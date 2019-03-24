@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hauptspeise.Controllerhauptspeise">
+   <children>
+      <Separator layoutX="10.0" layoutY="289.0" prefHeight="14.0" prefWidth="600.0" />
+      <RadioButton fx:id="Menue1" layoutX="62.0" layoutY="18.0" mnemonicParsing="false" onAction="#PreisberechnenHS" text="Menü 1&#10;2,00€">
+         <toggleGroup>
+            <ToggleGroup fx:id="menue" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="Menue2" layoutX="258.0" layoutY="18.0" mnemonicParsing="false" onAction="#PreisberechnenHS" text="Menü 2&#10;2,10€">
+         <toggleGroup>
+            <ToggleGroup fx:id="menue" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="Menue3" layoutX="465.0" layoutY="18.0" mnemonicParsing="false" onAction="#PreisberechnenHS" text="Menü 3&#10;1,90€">
+         <toggleGroup>
+            <ToggleGroup fx:id="menue" />
+         </toggleGroup>
+      </RadioButton>
+      <Separator layoutX="211.0" layoutY="19.0" orientation="VERTICAL" prefHeight="270.0" prefWidth="0.0" />
+      <Separator layoutX="412.0" layoutY="18.0" orientation="VERTICAL" prefHeight="272.0" prefWidth="6.0" />
+   </children>
+</Pane>
