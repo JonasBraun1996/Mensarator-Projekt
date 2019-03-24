@@ -2,4 +2,23 @@
 
 <?import javafx.scene.control.Tab?>
 
-<Tab text="Untitled Tab" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hauptspeise.Controllerhauptspeise" />
+ <Tab fx:id="hauptspeiseTab" text="Hauptspeise" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hauptspeise.Controllerhauptspeise" />
+ >
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="startseite" layoutX="14.0" layoutY="303.0" mnemonicParsing="false" onAction="#ZurueckZurStartseite" prefHeight="40.0" prefWidth="150.0" text="Startseite" />
+                  <Separator layoutY="279.0" prefHeight="14.0" prefWidth="600.0" />
+                  <Button fx:id="hauptspeiseWeiter" layoutX="436.0" layoutY="303.0" mnemonicParsing="false" onAction="#hauptspeiseWeiterClicked" prefHeight="40.0" prefWidth="150.0" text="Weiter" />
+                  <RadioButton fx:id="Menue1" layoutX="52.0" layoutY="8.0" mnemonicParsing="false" onAction="#PreisberechnenHS" text="Menü 1&#10;2,00€">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="menue" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="Menue2" layoutX="248.0" layoutY="8.0" mnemonicParsing="false" onAction="#PreisberechnenHS" text="Menü 2&#10;2,10€" toggleGroup="$menue" />
+                  <RadioButton fx:id="Menue3" layoutX="455.0" layoutY="8.0" mnemonicParsing="false" onAction="#PreisberechnenHS" text="Menü 3&#10;1,90€" toggleGroup="$menue" />
+                  <Separator layoutX="201.0" layoutY="9.0" orientation="VERTICAL" prefHeight="270.0" prefWidth="0.0" />
+                  <Separator layoutX="402.0" layoutY="8.0" orientation="VERTICAL" prefHeight="272.0" prefWidth="6.0" />
+             
+               </children></AnchorPane>
+      </content>
+    </Tab>

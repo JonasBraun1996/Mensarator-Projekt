@@ -37,6 +37,7 @@ public class Main extends Application {
 
 		try {
 
+		/*
 			Parent root = FXMLLoader.load(getClass().getResource("/client/client.fxml"));
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
@@ -48,15 +49,17 @@ public class Main extends Application {
 			// Legt die minimale Gr��e des Fensters fest.
 			primaryStage.setMinWidth(primaryStage.getWidth());
 			primaryStage.setMinHeight(primaryStage.getHeight());
-
-			/*
-			 * FXMLLoader root = new FXMLLoader(getClass().getResource(".fxml")); Parent
-			 * view = root.load(); Scene scene = new Scene(view);
-			 * scene.getStylesheets().add(getClass().getResource("application.css").
-			 * toExternalForm()); primaryStage.setTitle("Mensarator");
-			 * primaryStage.setScene(scene); primaryStage.show();
-			 * 
-			 */
+*/
+			
+			  FXMLLoader root = new FXMLLoader(getClass().getResource("/client/client.fxml")); 
+			  Parent view = root.load(); 
+			  Scene scene = new Scene(view);
+			  scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			  primaryStage.setTitle("Mensarator");
+			  primaryStage.setScene(scene); 
+			  primaryStage.show();
+			 
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
