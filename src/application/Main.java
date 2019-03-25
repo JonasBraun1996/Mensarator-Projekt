@@ -7,13 +7,16 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-
+	
+	public static AllInOneController controllerMain;
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			FXMLLoader root = new FXMLLoader(getClass().getResource("StartSeite.fxml"));
-			Parent view = root.load();
-			Scene scene = new Scene(view);
+			FXMLLoader loaderMain = new FXMLLoader(getClass().getResource("/application/AllInOne.fxml"));
+			Parent root = loaderMain.load();
+			controllerMain = loaderMain.getController();
+			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setTitle("Mensarator");
 			primaryStage.setScene(scene);

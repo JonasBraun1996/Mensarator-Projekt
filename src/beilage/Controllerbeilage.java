@@ -1,15 +1,21 @@
 package beilage;
 
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
-import javafx.scene.control.TextArea;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 
-public class Controllerbeilage {
+public class Controllerbeilage implements Initializable{
 	
 	
 	@FXML
@@ -59,27 +65,34 @@ public class Controllerbeilage {
 
 	@FXML
 	private RadioButton Bratensosse;
-
-	
 	
 	@FXML
-	void beilageZurueckClicked(ActionEvent event) {
-
-		//tabPane.getSelectionModel().select(hauptspeiseTab);
-
-	}
-
-	@FXML
-	void beilageWeiterClicked(ActionEvent event) {
-
-		//tabPane.getSelectionModel().select(getraenkeTab);
-
-	}
+	private BorderPane rootBeilage;
 	
-	public void PreisberechnenBL(ActionEvent e) {
+	Pane center;
+	
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		
+		try {
+			center = FXMLLoader.load(getClass().getResource("/getraenke/getraenkePane.fxml"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
 
-		RadioButton rb = (RadioButton) e.getSource();
-		String name = rb.getId();
+	  @FXML
+	  void weiterZuGetraenke(ActionEvent event) {
+		  rootBeilage.setCenter(center);	
+	  }
+	
+	  @FXML
+	    void PreisberechnenBL(ActionEvent e) {
+
+	
+//		RadioButton rb = (RadioButton) e.getSource();
+//		String name = rb.getId();
 
 		/*switch (name) {
 
@@ -181,4 +194,6 @@ public class Controllerbeilage {
 
 	
 }
+
+	
 }

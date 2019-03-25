@@ -1,14 +1,21 @@
 package getraenke;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
-import javafx.scene.control.TextArea;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 
-public class Controllergetraenke {
+public class Controllergetraenke implements Initializable{
 	
 	@FXML
 	public TabPane tabPane;
@@ -21,10 +28,6 @@ public class Controllergetraenke {
 
 	@FXML
 	private Button getraenkeZurueck;
-
-	@FXML
-	private TextArea SummenfeldGetraenk;
-
 	
 	@FXML
 	private RadioButton Fanta;
@@ -53,18 +56,26 @@ public class Controllergetraenke {
 	@FXML
 	private RadioButton CapriSonne;
 	
-	/*@FXML
-	void GetraenkeZurueckClicked(ActionEvent event) {
-
-		tabPane.getSelectionModel().select(beilageTab);
-
-	}
-
+	@FXML 
+	private Button weiterZuWarenkorb;
+	
 	@FXML
-	void GetraenkeWeiterClicked(ActionEvent event) {
-
-		tabPane.getSelectionModel().select(warenkorbTab);
-
+    private BorderPane rootGetraenke;
+	
+	Pane center;
+	
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		try {
+			center = FXMLLoader.load(getClass().getResource("/warenkorb/warenkorb.fxml"));
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
 	}
-*/
+	
+	@FXML
+    void weiterZuWarenkorb(ActionEvent event) {
+		rootGetraenke.setCenter(center);
+    }
 }

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane fx:id="rootBeilage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="beilage.Controllerbeilage">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Separator layoutY="294.0" prefHeight="14.0" prefWidth="600.0" />
+            <Separator layoutX="106.0" layoutY="213.0" prefHeight="12.0" prefWidth="388.0" />
+            <Label layoutX="261.0" layoutY="159.0" prefHeight="41.0" prefWidth="78.0" text="Soßen" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="Pommes" layoutX="461.0" layoutY="41.0" mnemonicParsing="false" text="Pommes&#10;1,50€" />
+            <RadioButton fx:id="Reis" layoutX="462.0" layoutY="87.0" mnemonicParsing="false" text="Reis&#10;1,10€" />
+            <RadioButton fx:id="Spaetzle" layoutX="381.0" layoutY="87.0" mnemonicParsing="false" text="Spätzle&#10;1,30€" />
+            <RadioButton fx:id="Kroketten" layoutX="289.0" layoutY="87.0" mnemonicParsing="false" text="Kroketten&#10;1,50€" />
+            <RadioButton fx:id="Suppe" layoutX="176.0" layoutY="87.0" mnemonicParsing="false" text="Suppe&#10;1,00€" />
+            <RadioButton fx:id="Nudeln" layoutX="76.0" layoutY="87.0" mnemonicParsing="false" text="Nudeln&#10;1,20€" />
+            <RadioButton fx:id="Gemuese" layoutX="379.0" layoutY="41.0" mnemonicParsing="false" text="Gemüse&#10;1,20€" />
+            <RadioButton fx:id="Salat" layoutX="289.0" layoutY="41.0" mnemonicParsing="false" text="Salat&#10;1,50€" />
+            <RadioButton fx:id="Kartoffelbrei" layoutX="176.0" layoutY="41.0" mnemonicParsing="false" text="Kartoffelbrei&#10;1,60€" />
+            <RadioButton fx:id="Popcorn" layoutX="73.0" layoutY="41.0" mnemonicParsing="false" text="Popcorn&#10;1,60€" />
+            <RadioButton fx:id="Rahmsosse" layoutX="411.0" layoutY="232.0" mnemonicParsing="false" text="Rahmsoße&#10;0,70€" />
+            <RadioButton fx:id="Jaegersosse" layoutX="263.0" layoutY="232.0" mnemonicParsing="false" text="Jägersoße&#10;0,80€" />
+            <RadioButton fx:id="Bratensosse" layoutX="106.0" layoutY="232.0" mnemonicParsing="false" text="Bratensoße&#10;0,70€" />
+            <Button fx:id="beilageWeiter" layoutX="419.0" layoutY="332.0" mnemonicParsing="false" onAction="#weiterZuGetraenke" prefHeight="40.0" prefWidth="150.0" text="Weiter" />
+            <Button fx:id="beilageZurueck" layoutX="31.0" layoutY="332.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Zurück" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

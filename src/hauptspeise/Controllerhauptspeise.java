@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import client.Controllerclient;
-import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,12 +11,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.ToggleGroup;
-import startseite.Controllerstartseite;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 
-public class Controllerhauptspeise {
+public class Controllerhauptspeise implements Initializable{
 
 	@FXML
 	public Tab hauptspeiseTab;
@@ -40,9 +37,30 @@ public class Controllerhauptspeise {
 
 	@FXML
 	private ToggleGroup menue;
-
+	 
+	@FXML
+    private BorderPane rootBeilage;
+    
+	Pane center;
 	
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// Summe vorbelegen
+		try {
+			center = FXMLLoader.load(getClass().getResource("/beilage/beilagePane.fxml"));
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
 
+	}
+	
+	 @FXML
+	 void weiterZuBeilage(ActionEvent event) {	
+
+		 rootBeilage.setCenter(center);				
+	 }
+	
 	public void PreisberechnenHS(ActionEvent e) {
 
 		RadioButton rb = (RadioButton) e.getSource();
@@ -74,18 +92,6 @@ public class Controllerhauptspeise {
 
 	}
 
-	@FXML
-	void hauptspeiseWeiterClicked(ActionEvent event) {
-
-		// tabPane.getSelectionModel().select(tabBeilage);
-
-	}
-
-	@FXML
-	void ZurueckZurStartseite(ActionEvent event) {
-
-		// tabPane.getSelectionModel().select(tabStartseite);
-
-	}
+	
 
 }
