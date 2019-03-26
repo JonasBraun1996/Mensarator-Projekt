@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane fx:id="rootBeilage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="beilage.Controllerbeilage">
    <center>
       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
@@ -33,8 +32,8 @@
             <RadioButton fx:id="Rahmsosse" layoutX="411.0" layoutY="232.0" mnemonicParsing="false" text="Rahmsoße&#10;0,70€" />
             <RadioButton fx:id="Jaegersosse" layoutX="263.0" layoutY="232.0" mnemonicParsing="false" text="Jägersoße&#10;0,80€" />
             <RadioButton fx:id="Bratensosse" layoutX="106.0" layoutY="232.0" mnemonicParsing="false" text="Bratensoße&#10;0,70€" />
-            <Button fx:id="beilageWeiter" layoutX="419.0" layoutY="332.0" mnemonicParsing="false" onAction="#weiterZuGetraenke" prefHeight="40.0" prefWidth="150.0" text="Weiter" />
-            <Button fx:id="beilageZurueck" layoutX="31.0" layoutY="332.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Zurück" />
+            <Button fx:id="beilageWeiter" layoutX="319.0" layoutY="332.0" mnemonicParsing="false" onAction="#weiterZuGetraenke" prefHeight="40.0" prefWidth="250.0" text="Weiter" />
+            <Button fx:id="beilageZurueck" layoutX="31.0" layoutY="332.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="250.0" text="Zurück" />
          </children>
       </Pane>
    </center>

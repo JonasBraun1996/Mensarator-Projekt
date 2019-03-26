@@ -24,9 +24,6 @@ public class Controllerhauptspeise implements Initializable{
 	private Button hauptspeiseWeiter;
 
 	@FXML
-	private Button startseite;
-
-	@FXML
 	private RadioButton Menue1;
 
 	@FXML
@@ -38,28 +35,32 @@ public class Controllerhauptspeise implements Initializable{
 	@FXML
 	private ToggleGroup menue;
 	 
-	@FXML
-    private BorderPane rootBeilage;
+    @FXML
+    private BorderPane rootHauptspeise;
     
 	Pane center;
+	Pane back;
+	Pane reset;
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		// Summe vorbelegen
 		try {
 			center = FXMLLoader.load(getClass().getResource("/beilage/beilagePane.fxml"));
 		} catch (IOException e) {
 			
 			e.printStackTrace();
 		}
+		
+			
 
 	}
 	
 	 @FXML
 	 void weiterZuBeilage(ActionEvent event) {	
 
-		 rootBeilage.setCenter(center);				
+		 rootHauptspeise.setCenter(center);				
 	 }
+	
 	
 	public void PreisberechnenHS(ActionEvent e) {
 

@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="warenkorb.Controllerwarenkorb">
+<BorderPane fx:id="rootWarenkorb" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="warenkorb.Controllerwarenkorb">
    <center>
-      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="212.0" layoutY="24.0" text="Warenkorb">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="warenkorbWeiter" layoutX="311.0" layoutY="336.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="250.0" text="Startseite" />
+            <Button fx:id="warenkorbZurueck" layoutX="14.0" layoutY="336.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="250.0" text="Zurück" />
+            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="198.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@QR.JPEG" />
+               </image>
+            </ImageView>
+         </children></Pane>
    </center>
 </BorderPane>

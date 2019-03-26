@@ -23,9 +23,6 @@ public class Controllerbeilage implements Initializable{
 
 	@FXML
 	private Button beilageWeiter;
-
-	@FXML
-	private Button beilageZurueck;
 	
 	@FXML
 	private RadioButton Pommes;
@@ -68,6 +65,7 @@ public class Controllerbeilage implements Initializable{
 	
 	@FXML
 	private BorderPane rootBeilage;
+	
 	
 	Pane center;
 	

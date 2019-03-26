@@ -25,6 +25,7 @@ public class AllInOneController implements Initializable{
 		
 		Pane footer;
 		Pane center;
+		static int counter = 0;
 	
 		
 		@Override
@@ -32,6 +33,7 @@ public class AllInOneController implements Initializable{
 	
 			try {
 			center = FXMLLoader.load(getClass().getResource("/hauptspeise/hauptspeise2.fxml"));
+			
 			footer = FXMLLoader.load(getClass().getResource("/application/footer.fxml"));
 	
 				
@@ -43,8 +45,13 @@ public class AllInOneController implements Initializable{
 	}
 		@FXML
 	    void start(ActionEvent event) {
+				counter=counter +1;
 				root.setCenter(center);
-				root.setBottom(footer);	
+				if(counter == 1) {
+					root.setBottom(footer);
+				}
+				
 		}
+		
 
 }

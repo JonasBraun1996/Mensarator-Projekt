@@ -25,9 +25,6 @@ public class Controllergetraenke implements Initializable{
 
 	@FXML
 	private Button getraenkeWeiter;
-
-	@FXML
-	private Button getraenkeZurueck;
 	
 	@FXML
 	private RadioButton Fanta;
@@ -78,4 +75,5 @@ public class Controllergetraenke implements Initializable{
     void weiterZuWarenkorb(ActionEvent event) {
 		rootGetraenke.setCenter(center);
     }
+	
 }

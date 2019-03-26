@@ -7,29 +7,21 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 
-<BorderPane fx:id="rootBeilage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hauptspeise.Controllerhauptspeise">
+<BorderPane fx:id="rootHauptspeise" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hauptspeise.Controllerhauptspeise">
    <center>
       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <Separator layoutX="3.0" layoutY="327.0" prefHeight="14.0" prefWidth="600.0" />
             <RadioButton fx:id="Menue1" layoutX="48.0" layoutY="26.0" mnemonicParsing="false" onAction="#PreisberechnenHS" text="Menü 1&#10;2,00€">
                <toggleGroup>
-                  <ToggleGroup fx:id="menue" />
+                  <ToggleGroup fx:id="menu" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="Menue2" layoutX="269.0" layoutY="26.0" mnemonicParsing="false" onAction="#PreisberechnenHS" text="Menü 2&#10;2,10€">
-               <toggleGroup>
-                  <ToggleGroup fx:id="menue" />
-               </toggleGroup>
-            </RadioButton>
-            <RadioButton fx:id="Menue3" layoutX="467.0" layoutY="26.0" mnemonicParsing="false" onAction="#PreisberechnenHS" text="Menü 3&#10;1,90€">
-               <toggleGroup>
-                  <ToggleGroup fx:id="menue" />
-               </toggleGroup>
-            </RadioButton>
+            <RadioButton fx:id="Menue2" layoutX="269.0" layoutY="26.0" mnemonicParsing="false" onAction="#PreisberechnenHS" text="Menü 2&#10;2,10€" toggleGroup="$menu" />
+            <RadioButton fx:id="Menue3" layoutX="467.0" layoutY="26.0" mnemonicParsing="false" onAction="#PreisberechnenHS" text="Menü 3&#10;1,90€" toggleGroup="$menu" />
             <Separator layoutX="406.0" layoutY="15.0" orientation="VERTICAL" prefHeight="310.0" prefWidth="5.0" />
             <Separator layoutX="182.0" layoutY="13.0" orientation="VERTICAL" prefHeight="313.0" prefWidth="6.0" />
-            <Button fx:id="beilageZurueck" layoutX="57.0" layoutY="341.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="250.0" text="Zurück" />
+            <Button layoutX="57.0" layoutY="341.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="250.0" text="Zurück" />
             <Button fx:id="beilageWeiter" layoutX="342.0" layoutY="341.0" mnemonicParsing="false" onAction="#weiterZuBeilage" prefHeight="40.0" prefWidth="250.0" text="Weiter" />
          </children>
       </Pane>
