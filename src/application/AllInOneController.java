@@ -35,7 +35,7 @@ public class AllInOneController implements Initializable{
 			center = FXMLLoader.load(getClass().getResource("/hauptspeise/hauptspeise2.fxml"));
 			
 			footer = FXMLLoader.load(getClass().getResource("/application/footer.fxml"));
-	
+			
 				
 			} catch (IOException e) {
 				
