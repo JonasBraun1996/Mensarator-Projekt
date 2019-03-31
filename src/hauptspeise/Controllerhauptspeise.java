@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import application.Summe;
+import application.footerController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -42,14 +43,17 @@ public class Controllerhauptspeise implements Initializable {
 	Pane center;
 	Pane back;
 	Pane reset;
-	
-//	@FXML
-//	public footerController fc;
+
+	@FXML
+	public static footerController fc;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		try {
+			FXMLLoader loaderController = new FXMLLoader(getClass().getResource("hauptspeise/hauptspeise2.fxml"));
 			center = FXMLLoader.load(getClass().getResource("/beilage/beilagePane.fxml"));
+			fc = loaderController.getController();
+		
 		} catch (IOException e) {
 
 			e.printStackTrace();
@@ -74,6 +78,7 @@ public class Controllerhauptspeise implements Initializable {
 			
 			Summe.resetSumme();
 			Summe.changeSumme(2.0, rb);
+			
 			System.out.println(Summe.getSumme());
 
 			break;
