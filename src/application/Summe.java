@@ -15,14 +15,13 @@ public class Summe {
 		}else {
 			Summe = Summe - change;
 		}
+		
+
 	}
 	
 	public static void resetSumme() {
 		Summe = 0;
 	}
 	
-	public String toString() {
-		String summe = Summe + "0";
-		return summe;
-	}
+	
 }

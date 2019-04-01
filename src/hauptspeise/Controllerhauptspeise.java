@@ -67,6 +67,8 @@ public class Controllerhauptspeise implements Initializable {
 		rootHauptspeise.setCenter(center);
 	}
 
+	double summe=0;
+	
 	public void PreisberechnenHS(ActionEvent e) {
 
 		RadioButton rb = (RadioButton) e.getSource();
@@ -78,8 +80,9 @@ public class Controllerhauptspeise implements Initializable {
 			
 			Summe.resetSumme();
 			Summe.changeSumme(2.0, rb);
+			application.footerController.setSumme(Summe.getSumme());
 			
-			System.out.println(Summe.getSumme());
+			
 
 			break;
 
@@ -101,4 +104,5 @@ public class Controllerhauptspeise implements Initializable {
 		}
 		}
 	}
+	
 }

@@ -1,11 +1,8 @@
 /.DS_Store
 /application/
 /beilage/
-/client/
-/footer/
 /getraenke/
 /hauptspeise/
 /menubar/
 /startseite/
 /warenkorb/
-/footerController.class
