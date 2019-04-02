@@ -26,8 +26,8 @@
             <RadioButton fx:id="Ayran" layoutX="74.0" layoutY="68.0" mnemonicParsing="false" onAction="#PreisberechnenGr" text="Ayran&#10;0,50€" />
             <ComboBox layoutX="143.0" layoutY="261.0" prefWidth="150.0" promptText="Größe" />
             <Separator layoutY="306.0" prefHeight="14.0" prefWidth="600.0" />
-            <Button fx:id="getraenkeWeiter" layoutX="429.0" layoutY="338.0" mnemonicParsing="false" onAction="#weiterZuWarenkorb" prefHeight="40.0" prefWidth="150.0" text="Weiter" />
-            <Button fx:id="getraenkeZurueck" layoutX="25.0" layoutY="338.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Zurück" />
+            <Button id="button" fx:id="getraenkeWeiter" layoutX="429.0" layoutY="338.0" mnemonicParsing="false" onAction="#weiterZuWarenkorb" prefHeight="40.0" prefWidth="150.0" text="Weiter" />
+            <Button id="button" fx:id="getraenkeZurueck" layoutX="25.0" layoutY="338.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Zurück" />
             <ComboBox layoutX="410.0" layoutY="123.0" prefHeight="29.0" prefWidth="153.0" promptText="Medium/Classic/Still" />
             <TextField fx:id="SummenfeldGetr" layoutX="226.0" layoutY="346.0" />
          </children>

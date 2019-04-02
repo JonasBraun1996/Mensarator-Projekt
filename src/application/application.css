@@ -3,3 +3,17 @@
 	
 	
 }
+
+#button{
+	
+-fx-background-color: #B5DAD1; 
+-fx-border-color: #7FB8AA;
+	
+}
+
+#button:hover{
+	
+	 -fx-text-fill:#196653;
+ 
+	
+}

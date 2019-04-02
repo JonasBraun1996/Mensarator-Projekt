@@ -33,8 +33,9 @@
             <RadioButton fx:id="Rahmsosse" layoutX="411.0" layoutY="232.0" mnemonicParsing="false" onAction="#PreisberechnenBL" text="Rahmsoße&#10;0,70€" />
             <RadioButton fx:id="Jaegersosse" layoutX="263.0" layoutY="232.0" mnemonicParsing="false" onAction="#PreisberechnenBL" text="Jägersoße&#10;0,80€" />
             <RadioButton fx:id="Bratensosse" layoutX="106.0" layoutY="232.0" mnemonicParsing="false" onAction="#PreisberechnenBL" text="Bratensoße&#10;0,70€" />
-            <Button fx:id="beilageWeiter" layoutX="420.0" layoutY="332.0" mnemonicParsing="false" onAction="#weiterZuGetraenke" prefHeight="40.0" prefWidth="149.0" text="Weiter" />
+            <Button id="button" fx:id="beilageWeiter" layoutX="420.0" layoutY="332.0" mnemonicParsing="false" onAction="#weiterZuGetraenke" prefHeight="40.0" prefWidth="149.0" text="Weiter" />
             <TextField fx:id="SummenfeldBeilage" layoutX="215.0" layoutY="340.0" />
+            <Button id="button" layoutX="35.0" layoutY="334.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="149.0" text="Zurück" />
          </children>
       </Pane>
    </center>
