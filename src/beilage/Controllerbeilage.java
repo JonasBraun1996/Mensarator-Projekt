@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Tab;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 
@@ -65,11 +66,19 @@ public class Controllerbeilage implements Initializable {
 	@FXML
 	private BorderPane rootBeilage;
 
+	@FXML
+	private TextField SummenfeldBeilage;
+
 	Pane center;
+
+	@FXML
+	void preisholen(ActionEvent event) {
+		SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
+	}
+
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-
 		try {
 			center = FXMLLoader.load(getClass().getResource("/getraenke/getraenkePane.fxml"));
 		} catch (IOException e) {
@@ -94,12 +103,14 @@ public class Controllerbeilage implements Initializable {
 		case ("Pommes"): {
 
 			Summe.changeSumme(1.5, rb);
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
 			break;
 
 		}
 
 		case ("Reis"): {
 			Summe.changeSumme(1.1, rb);
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
 			break;
 
 		}
@@ -107,83 +118,77 @@ public class Controllerbeilage implements Initializable {
 		case ("Spaetzle"): {
 
 			Summe.changeSumme(1.3, rb);
-
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
 			break;
 
 		}
 
 		case ("Kroketten"): {
 			Summe.changeSumme(1.5, rb);
-
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
 			break;
 
 		}
 
 		case ("Suppe"): {
-
 			Summe.changeSumme(1.0, rb);
-
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
 			break;
 
 		}
 
 		case ("Nudeln"): {
-
 			Summe.changeSumme(1.2, rb);
-
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
 			break;
 
 		}
 
 		case ("Gemuese"): {
-
 			Summe.changeSumme(1.2, rb);
-
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
 			break;
 
 		}
 
 		case ("Salat"): {
-
 			Summe.changeSumme(1.5, rb);
-
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
 			break;
 
 		}
 
 		case ("Kartoffelbrei"): {
-
 			Summe.changeSumme(1.6, rb);
-
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
 			break;
 
 		}
 
 		case ("Popcorn"): {
 			Summe.changeSumme(1.6, rb);
-
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
 			break;
 
 		}
 		case ("Rahmsosse"): {
-
 			Summe.changeSumme(0.7, rb);
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
 			break;
 
 		}
 
 		case ("Jaegersosse"): {
-
 			Summe.changeSumme(0.8, rb);
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
 			break;
 
 		}
 
 		case ("Bratensosse"): {
-
 			Summe.changeSumme(0.7, rb);
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
 			break;
-
 		}
 		}
 	}

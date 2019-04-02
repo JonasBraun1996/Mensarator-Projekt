@@ -5,7 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import application.Summe;
-import application.footerController;
+import beilage.Controllerbeilage;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Tab;
+import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
@@ -33,9 +34,22 @@ public class Controllerhauptspeise implements Initializable {
 
 	@FXML
 	private RadioButton Menue3;
-
+	
+	@FXML 
+	private TextField Summenfeld;
+	
 	@FXML
 	private ToggleGroup menue;
+	
+	public static Controllerbeilage cb;
+	
+	public TextField getTxtMain() {
+		return Summenfeld;
+	}
+	
+	public void setTxtMain(TextField txtMain) {
+		this.Summenfeld = txtMain;
+	}	
 
 	@FXML
 	private BorderPane rootHauptspeise;
@@ -43,16 +57,15 @@ public class Controllerhauptspeise implements Initializable {
 	Pane center;
 	Pane back;
 	Pane reset;
-
-	@FXML
-	public static footerController fc;
+	Pane footer;
+	
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		try {
-			FXMLLoader loaderController = new FXMLLoader(getClass().getResource("hauptspeise/hauptspeise2.fxml"));
 			center = FXMLLoader.load(getClass().getResource("/beilage/beilagePane.fxml"));
-			fc = loaderController.getController();
+			footer = FXMLLoader.load(getClass().getResource("/application/footer.fxml"));
+			
 		
 		} catch (IOException e) {
 
@@ -60,14 +73,13 @@ public class Controllerhauptspeise implements Initializable {
 		}
 
 	}
-
+	
+	public static Controllerbeilage controller1;
+	
 	@FXML
 	void weiterZuBeilage(ActionEvent event) {
-
-		rootHauptspeise.setCenter(center);
+		rootHauptspeise.setCenter(center);	
 	}
-
-	double summe=0;
 	
 	public void PreisberechnenHS(ActionEvent e) {
 
@@ -77,30 +89,27 @@ public class Controllerhauptspeise implements Initializable {
 		switch (name) {
 
 		case ("Menue1"): {
-			
 			Summe.resetSumme();
 			Summe.changeSumme(2.0, rb);
-			application.footerController.setSumme(Summe.getSumme());
-			
-			
-
+			TextField Summefeld = getTxtMain();
+			Summefeld.setText("2.00");
 			break;
-
 		}
 
 		case ("Menue2"): {
 			Summe.resetSumme();
 			Summe.changeSumme(2.1, rb);
-			System.out.println(Summe.getSumme());
+			TextField Summefeld = getTxtMain();
+			Summefeld.setText("2.10");
 			break;
-
 		}
 
 		case ("Menue3"): {
 			Summe.resetSumme();
 			Summe.changeSumme(1.9, rb);
+			TextField Summefeld = getTxtMain();
+			Summefeld.setText("1.90");
 			break;
-
 		}
 		}
 	}

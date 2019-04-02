@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import application.Summe;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +13,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
+import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 
@@ -59,6 +62,9 @@ public class Controllergetraenke implements Initializable{
 	@FXML
     private BorderPane rootGetraenke;
 	
+	@FXML 
+	private ToggleButton IceCubes;
+	
 	Pane center;
 	
 	@Override
@@ -75,5 +81,90 @@ public class Controllergetraenke implements Initializable{
     void weiterZuWarenkorb(ActionEvent event) {
 		rootGetraenke.setCenter(center);
     }
+	
+	@FXML
+	void Eiswürfel(ActionEvent event) {
+		ToggleButton tb = (ToggleButton) event.getSource();
+		Summe.oneup(1, tb);
+		SummenfeldGetr.setText(Double.toString(Summe.getSumme()));
+	}
+	
+	@FXML
+	private TextField SummenfeldGetr;
+	
+	@FXML
+	void PreisberechnenGr(ActionEvent e) {
+
+		RadioButton rb = (RadioButton) e.getSource();
+		String name = rb.getId();
+
+		switch (name) {
+
+		case ("Ayran"): {
+
+			Summe.changeSumme(0.5, rb);
+			SummenfeldGetr.setText(Double.toString(Summe.getSumme()));
+			break;
+
+		}
+
+		case ("RedBull"): {
+			Summe.changeSumme(2.0, rb);
+			SummenfeldGetr.setText(Double.toString(Summe.getSumme()));
+			break;
+
+		}
+
+		case ("CapriSonne"): {
+
+			Summe.changeSumme(0.5, rb);
+			SummenfeldGetr.setText(Double.toString(Summe.getSumme()));
+			break;
+
+		}
+
+		case ("Apfelsaft"): {
+			Summe.changeSumme(0.9, rb);
+			SummenfeldGetr.setText(Double.toString(Summe.getSumme()));
+			break;
+
+		}
+
+		case ("Sprite"): {
+			Summe.changeSumme(1.0, rb);
+			SummenfeldGetr.setText(Double.toString(Summe.getSumme()));
+			break;
+
+		}
+
+		case ("Wasser"): {
+			Summe.changeSumme(0.5, rb);
+			SummenfeldGetr.setText(Double.toString(Summe.getSumme()));
+			break;
+
+		}
+
+		case ("Fanta"): {
+			Summe.changeSumme(1.0, rb);
+			SummenfeldGetr.setText(Double.toString(Summe.getSumme()));
+			break;
+
+		}
+
+		case ("Spezi"): {
+			Summe.changeSumme(1.0, rb);
+			SummenfeldGetr.setText(Double.toString(Summe.getSumme()));
+			break;
+
+		}
+
+		case ("Cola"): {
+			Summe.changeSumme(1.0, rb);
+			SummenfeldGetr.setText(Double.toString(Summe.getSumme()));
+			break;
+
+		}
+		}
+	}
 	
 }

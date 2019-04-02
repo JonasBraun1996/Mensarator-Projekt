@@ -23,35 +23,20 @@ public class AllInOneController implements Initializable{
 		@FXML
 		private BorderPane root;
 		
-		Pane footer;
 		Pane center;
-		static int counter = 0;
-	
 		
 		@Override
 		public void initialize(URL arg0, ResourceBundle arg1) {
 	
 			try {
 			center = FXMLLoader.load(getClass().getResource("/hauptspeise/hauptspeise2.fxml"));
-			
-			footer = FXMLLoader.load(getClass().getResource("/application/footer.fxml"));
-			
-				
 			} catch (IOException e) {
-				
 				e.printStackTrace();
 			}
 
 	}
 		@FXML
 	    void start(ActionEvent event) {
-				counter=counter +1;
 				root.setCenter(center);
-				if(counter == 1) {
-					root.setBottom(footer);
-				}
-				
 		}
-		
-
 }
