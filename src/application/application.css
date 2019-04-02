@@ -27,3 +27,34 @@
 	-fx-border-color: #7FB8AA;
 	
 }
+
+#eiswuerfel{
+	
+	
+	-fx-border-color: #196653;
+	-fx-background-color: #B5DAD1;
+	-fx-text-fill: #196653;
+}
+	
+	
+
+#eiswuerfel:selected{
+	-fx-border-color: #7FB8AA;
+	-fx-background-color: #196653;
+	-fx-text-fill: #FFFFFF;
+	
+	
+	}
+	
+
+
+
+#dropdown {
+	
+-fx-background-color:#B5DAD1;
+-fx-border-color:   #7FB8AA;
+	
+
+	
+}
+
