@@ -15,6 +15,8 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.Tooltip;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 
@@ -41,6 +43,15 @@ public class Controllerhauptspeise implements Initializable {
 	@FXML
 	private ToggleGroup menue;
 	
+    @FXML
+    private ImageView Beins;
+
+    @FXML
+    private ImageView Bzwei;
+
+    @FXML
+    private ImageView Bdrei;
+	
 	public static Controllerbeilage cb;
 	
 	public TextField getTxtMain() {
@@ -59,11 +70,16 @@ public class Controllerhauptspeise implements Initializable {
 	Pane reset;
 	Pane footer;
 	
-
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		try {
-			center = FXMLLoader.load(getClass().getResource("/beilage/beilagePane.fxml"));		
+			center = FXMLLoader.load(getClass().getResource("/beilage/beilagePane.fxml"));
+			final Tooltip tooltipBildzwei = new Tooltip();
+			tooltipBildzwei.setText("Vegetarisch");
+			Menue2.setTooltip(tooltipBildzwei);
+			final Tooltip tooltipBilddrei = new Tooltip();
+			tooltipBilddrei.setText("Vegan");
+			Menue3.setTooltip(tooltipBilddrei);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
