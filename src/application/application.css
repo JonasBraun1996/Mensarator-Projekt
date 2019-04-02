@@ -15,5 +15,15 @@
 	
 	 -fx-text-fill:#196653;
  
+}
+
+#img { 
+	
+	-fx-image-borders: #7FB8AA;
+	
+}
+
+#summe{
+	-fx-border-color: #7FB8AA;
 	
 }
