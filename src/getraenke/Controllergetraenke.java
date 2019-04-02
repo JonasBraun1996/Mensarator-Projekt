@@ -83,7 +83,7 @@ public class Controllergetraenke implements Initializable{
     }
 	
 	@FXML
-	void Eiswürfel(ActionEvent event) {
+	void Eiswuerfel(ActionEvent event) {
 		ToggleButton tb = (ToggleButton) event.getSource();
 		Summe.oneup(1, tb);
 		SummenfeldGetr.setText(Double.toString(Summe.getSumme()));
@@ -91,6 +91,8 @@ public class Controllergetraenke implements Initializable{
 	
 	@FXML
 	private TextField SummenfeldGetr;
+
+	@FXML Button getraenkeZurueck;
 	
 	@FXML
 	void PreisberechnenGr(ActionEvent e) {

@@ -14,7 +14,7 @@
       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <Separator layoutX="58.0" layoutY="228.0" prefHeight="14.0" prefWidth="416.0" />
-            <ToggleButton fx:id="IceCubes" layoutX="390.0" layoutY="261.0" mnemonicParsing="false" onAction="#Eiswürfel" text="Eiswürfel" />
+            <ToggleButton fx:id="IceCubes" layoutX="390.0" layoutY="261.0" mnemonicParsing="false" onAction="#Eiswuerfel" text="Eiswürfel" />
             <RadioButton fx:id="Cola" layoutX="292.0" layoutY="175.0" mnemonicParsing="false" onAction="#PreisberechnenGr" text="Cola&#10;1,00€" />
             <RadioButton fx:id="Fanta" layoutX="71.0" layoutY="175.0" mnemonicParsing="false" onAction="#PreisberechnenGr" text="Fanta&#10;1,00€" />
             <RadioButton fx:id="Apfelsaft" layoutX="71.0" layoutY="121.0" mnemonicParsing="false" onAction="#PreisberechnenGr" text="Apfelsaft&#10;0,90€" />
