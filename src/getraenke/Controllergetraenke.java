@@ -5,11 +5,14 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import application.Summe;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
@@ -67,16 +70,34 @@ public class Controllergetraenke implements Initializable{
 	
 	Pane center;
 	
+	ObservableList<String> wateroptions = FXCollections.observableArrayList("Still", "Medium", "Classic");
+	ObservableList<String> sizeoptions = FXCollections.observableArrayList("0,33 l", "0,50 l", "1,00 l");
+	
+	@FXML
+	private ComboBox<String> wasser;
+	
+	@FXML
+	private ComboBox<String> size;
+	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		try {
 			center = FXMLLoader.load(getClass().getResource("/warenkorb/warenkorb.fxml"));
+			
+			//ComboBox Wasser
+			wasser.setValue("Still");
+			wasser.setItems(wateroptions);
+			
+			//ComboBox Groeﬂe
+			size.setValue("0,33 l");
+			size.setItems(sizeoptions);
+			 
 		} catch (IOException e) {
 			
 			e.printStackTrace();
 		}
 	}
-	
+	    
 	@FXML
     void weiterZuWarenkorb(ActionEvent event) {
 		rootGetraenke.setCenter(center);
@@ -86,7 +107,7 @@ public class Controllergetraenke implements Initializable{
 	void Eiswuerfel(ActionEvent event) {
 		ToggleButton tb = (ToggleButton) event.getSource();
 		Summe.oneup(1, tb);
-		SummenfeldGetr.setText(Double.toString(Summe.getSumme()));
+		SummenfeldGetr.setText(Double.toString(Summe.getSumme()) + "0 Ä");
 	}
 	
 	@FXML
@@ -103,70 +124,58 @@ public class Controllergetraenke implements Initializable{
 		switch (name) {
 
 		case ("Ayran"): {
-
-			Summe.changeSumme(0.5, rb);
-			SummenfeldGetr.setText(Double.toString(Summe.getSumme()));
+			Summe.changeSumme(0.50, rb);
+			SummenfeldGetr.setText(Double.toString(Summe.getSumme()) + "0 Ä");
 			break;
-
 		}
 
 		case ("RedBull"): {
-			Summe.changeSumme(2.0, rb);
-			SummenfeldGetr.setText(Double.toString(Summe.getSumme()));
+			Summe.changeSumme(2.00, rb);
+			SummenfeldGetr.setText(Double.toString(Summe.getSumme()) + "0 Ä");
 			break;
-
 		}
 
 		case ("CapriSonne"): {
-
-			Summe.changeSumme(0.5, rb);
-			SummenfeldGetr.setText(Double.toString(Summe.getSumme()));
+			Summe.changeSumme(0.50, rb);
+			SummenfeldGetr.setText(Double.toString(Summe.getSumme()) + "0 Ä");
 			break;
-
 		}
 
 		case ("Apfelsaft"): {
-			Summe.changeSumme(0.9, rb);
-			SummenfeldGetr.setText(Double.toString(Summe.getSumme()));
+			Summe.changeSumme(0.90, rb);
+			SummenfeldGetr.setText(Double.toString(Summe.getSumme()) + "0 Ä");
 			break;
-
 		}
 
 		case ("Sprite"): {
-			Summe.changeSumme(1.0, rb);
-			SummenfeldGetr.setText(Double.toString(Summe.getSumme()));
+			Summe.changeSumme(1.00, rb);
+			SummenfeldGetr.setText(Double.toString(Summe.getSumme()) + "0 Ä");
 			break;
-
 		}
 
 		case ("Wasser"): {
-			Summe.changeSumme(0.5, rb);
-			SummenfeldGetr.setText(Double.toString(Summe.getSumme()));
+			Summe.changeSumme(0.50, rb);
+			SummenfeldGetr.setText(Double.toString(Summe.getSumme()) + "0 Ä");
 			break;
-
 		}
 
 		case ("Fanta"): {
-			Summe.changeSumme(1.0, rb);
-			SummenfeldGetr.setText(Double.toString(Summe.getSumme()));
+			Summe.changeSumme(1.00, rb);
+			SummenfeldGetr.setText(Double.toString(Summe.getSumme()) + "0 Ä");
 			break;
-
 		}
 
 		case ("Spezi"): {
-			Summe.changeSumme(1.0, rb);
-			SummenfeldGetr.setText(Double.toString(Summe.getSumme()));
+			Summe.changeSumme(1.00, rb);
+			SummenfeldGetr.setText(Double.toString(Summe.getSumme()) + "0 Ä");
 			break;
-
 		}
 
 		case ("Cola"): {
-			Summe.changeSumme(1.0, rb);
-			SummenfeldGetr.setText(Double.toString(Summe.getSumme()));
+			Summe.changeSumme(1.00, rb);
+			SummenfeldGetr.setText(Double.toString(Summe.getSumme()) + "0 Ä");
 			break;
-
 		}
 		}
 	}
-	
 }

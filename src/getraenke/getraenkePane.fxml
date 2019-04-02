@@ -24,11 +24,11 @@
             <RadioButton fx:id="CapriSonne" layoutX="283.0" layoutY="68.0" mnemonicParsing="false" onAction="#PreisberechnenGr" text="Capri-Sonne&#10;0,50€" />
             <RadioButton fx:id="RedBull" layoutX="175.0" layoutY="68.0" mnemonicParsing="false" onAction="#PreisberechnenGr" text="Red-Bull&#10;2,00€" />
             <RadioButton fx:id="Ayran" layoutX="74.0" layoutY="68.0" mnemonicParsing="false" onAction="#PreisberechnenGr" text="Ayran&#10;0,50€" />
-            <ComboBox id="dropdown" layoutX="143.0" layoutY="261.0" prefWidth="150.0" promptText="Größe" />
+            <ComboBox id="dropdown" fx:id="size" layoutX="143.0" layoutY="261.0" prefWidth="150.0" promptText="Größe" />
             <Separator layoutY="315.0" prefHeight="14.0" prefWidth="600.0" />
             <Button id="button" fx:id="getraenkeWeiter" layoutX="430.0" layoutY="340.0" mnemonicParsing="false" onAction="#weiterZuWarenkorb" prefHeight="40.0" prefWidth="140.0" stylesheets="@../application/application.css" text="Weiter" />
             <Button id="button" fx:id="getraenkeZurueck" layoutX="30.0" layoutY="340.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" text="Zurück" />
-            <ComboBox id="dropdown" layoutX="410.0" layoutY="123.0" prefHeight="29.0" prefWidth="153.0" promptText="Medium/Classic/Still" />
+            <ComboBox id="dropdown" fx:id="wasser" layoutX="410.0" layoutY="123.0" prefHeight="29.0" prefWidth="153.0" promptText="Medium/Classic/Still" />
             <TextField id="summe" fx:id="SummenfeldGetr" layoutX="210.0" layoutY="340.0" prefHeight="39.0" prefWidth="180.0" stylesheets="@../application/application.css" />
          </children>
       </Pane>

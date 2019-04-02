@@ -76,7 +76,6 @@ public class Controllerbeilage implements Initializable {
 		SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
 	}
 
-
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		try {
@@ -84,7 +83,6 @@ public class Controllerbeilage implements Initializable {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	@FXML
@@ -101,93 +99,80 @@ public class Controllerbeilage implements Initializable {
 		switch (name) {
 
 		case ("Pommes"): {
-
-			Summe.changeSumme(1.5, rb);
-			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
+			Summe.changeSumme(1.50, rb);
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()) + "0 €");
 			break;
-
 		}
 
 		case ("Reis"): {
-			Summe.changeSumme(1.1, rb);
-			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
+			Summe.changeSumme(1.10, rb);
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()) + "0 €");
 			break;
-
 		}
 
 		case ("Spaetzle"): {
-
-			Summe.changeSumme(1.3, rb);
-			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
+			Summe.changeSumme(1.30, rb);
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()) + "0 €");
 			break;
-
 		}
 
 		case ("Kroketten"): {
-			Summe.changeSumme(1.5, rb);
-			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
+			Summe.changeSumme(1.50, rb);
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()) + "0 €");
 			break;
-
 		}
 
 		case ("Suppe"): {
-			Summe.changeSumme(1.0, rb);
-			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
+			Summe.changeSumme(1.00, rb);
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()) + "0 €");
 			break;
-
 		}
 
 		case ("Nudeln"): {
-			Summe.changeSumme(1.2, rb);
-			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
+			Summe.changeSumme(1.20, rb);
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()) + "0 €");
 			break;
-
 		}
 
 		case ("Gemuese"): {
-			Summe.changeSumme(1.2, rb);
-			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
+			Summe.changeSumme(1.20, rb);
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()) + "0 €");
 			break;
-
 		}
 
 		case ("Salat"): {
-			Summe.changeSumme(1.5, rb);
-			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
+			Summe.changeSumme(1.50, rb);
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()) + "0 €");
 			break;
-
 		}
 
 		case ("Kartoffelbrei"): {
-			Summe.changeSumme(1.6, rb);
-			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
+			Summe.changeSumme(1.60, rb);
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()) + "0 €");
 			break;
-
 		}
 
 		case ("Popcorn"): {
-			Summe.changeSumme(1.6, rb);
-			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
+			Summe.changeSumme(1.60, rb);
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()) + "0 €");
 			break;
-
 		}
+		
 		case ("Rahmsosse"): {
-			Summe.changeSumme(0.7, rb);
-			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
+			Summe.changeSumme(0.70, rb);
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()) + "0 €");
 			break;
-
 		}
 
 		case ("Jaegersosse"): {
-			Summe.changeSumme(0.8, rb);
-			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
+			Summe.changeSumme(0.80, rb);
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()) + "0 €");
 			break;
-
 		}
 
 		case ("Bratensosse"): {
-			Summe.changeSumme(0.7, rb);
-			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()));
+			Summe.changeSumme(0.70, rb);
+			SummenfeldBeilage.setText(Double.toString(Summe.getSumme()) + "0 €");
 			break;
 		}
 		}

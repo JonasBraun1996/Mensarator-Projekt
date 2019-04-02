@@ -27,14 +27,13 @@ public class AllInOneController implements Initializable{
 		
 		@Override
 		public void initialize(URL arg0, ResourceBundle arg1) {
-	
 			try {
-			center = FXMLLoader.load(getClass().getResource("/hauptspeise/hauptspeise2.fxml"));
+				center = FXMLLoader.load(getClass().getResource("/hauptspeise/hauptspeise2.fxml"));
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-
-	}
+		}
+		
 		@FXML
 	    void start(ActionEvent event) {
 				root.setCenter(center);

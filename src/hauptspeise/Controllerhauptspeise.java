@@ -63,12 +63,8 @@ public class Controllerhauptspeise implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		try {
-			center = FXMLLoader.load(getClass().getResource("/beilage/beilagePane.fxml"));
-			footer = FXMLLoader.load(getClass().getResource("/application/footer.fxml"));
-			
-		
+			center = FXMLLoader.load(getClass().getResource("/beilage/beilagePane.fxml"));		
 		} catch (IOException e) {
-
 			e.printStackTrace();
 		}
 
@@ -92,7 +88,7 @@ public class Controllerhauptspeise implements Initializable {
 			Summe.resetSumme();
 			Summe.changeSumme(2.0, rb);
 			TextField Summefeld = getTxtMain();
-			Summefeld.setText("2.00");
+			Summefeld.setText("2.00 €");
 			break;
 		}
 
@@ -100,7 +96,7 @@ public class Controllerhauptspeise implements Initializable {
 			Summe.resetSumme();
 			Summe.changeSumme(2.1, rb);
 			TextField Summefeld = getTxtMain();
-			Summefeld.setText("2.10");
+			Summefeld.setText("2.10 €");
 			break;
 		}
 
@@ -108,10 +104,9 @@ public class Controllerhauptspeise implements Initializable {
 			Summe.resetSumme();
 			Summe.changeSumme(1.9, rb);
 			TextField Summefeld = getTxtMain();
-			Summefeld.setText("1.90");
+			Summefeld.setText("1.90 €");
 			break;
 		}
 		}
 	}
-	
 }
